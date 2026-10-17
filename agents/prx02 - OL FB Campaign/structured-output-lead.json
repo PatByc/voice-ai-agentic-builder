@@ -1,0 +1,138 @@
+{
+  "name": "OptimizeLabs Agent Głosowy Demo Lead",
+  "type": "ai",
+  "description": "Extract qualification, opportunity, objection, and next-step data from an OptimizeLabs voice-agent demo call. Use 'unknown' when the caller did not provide a value. Never infer missing numbers.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "summary": {
+        "type": "string",
+        "description": "Concise factual summary of the call and its outcome."
+      },
+      "demoMode": {
+        "type": "string",
+        "enum": ["tested_agent", "discussed_business", "both", "not_completed"],
+        "description": "How the prospect used the demo call."
+      },
+      "businessType": {
+        "type": "string",
+        "description": "Prospect's industry or business type, or 'unknown'."
+      },
+      "currentCallHandling": {
+        "type": "string",
+        "description": "How inbound calls are currently handled, or 'unknown'."
+      },
+      "mainOperationalProblem": {
+        "type": "string",
+        "description": "Main confirmed call-handling problem, or 'unknown'."
+      },
+      "approximateCallVolume": {
+        "type": "string",
+        "description": "Caller-provided call volume with its period, or 'unknown'. Do not normalize or invent a number."
+      },
+      "missedCallEstimate": {
+        "type": "string",
+        "description": "Caller-provided missed-call estimate with its period, or 'unknown'."
+      },
+      "genuineLeadEstimate": {
+        "type": "string",
+        "description": "Caller-provided estimate of missed genuine new-customer inquiries, or 'unknown'."
+      },
+      "customerValue": {
+        "type": "string",
+        "description": "Caller-provided value of a new customer or appointment, including currency and basis, or 'unknown'."
+      },
+      "opportunityScenario": {
+        "type": "string",
+        "description": "Illustrative calculation discussed during the call, including assumptions, or 'not_calculated'."
+      },
+      "desiredVoiceAiUse": {
+        "type": "string",
+        "description": "What the prospect would want an agent głosowy to handle, or 'unknown'."
+      },
+      "mainObjection": {
+        "type": "string",
+        "description": "Prospect's main stated concern or objection, or 'none'."
+      },
+      "interestLevel": {
+        "type": "string",
+        "enum": ["high", "medium", "low", "not_interested", "unknown"],
+        "description": "Interest level supported by the prospect's statements."
+      },
+      "potentialFit": {
+        "type": "string",
+        "enum": ["yes", "no", "unknown"],
+        "description": "Whether the conversation provides evidence of potential fit."
+      },
+      "prospectName": {
+        "type": "string",
+        "description": "Name explicitly provided and confirmed for the booking, or 'unknown'."
+      },
+      "prospectEmail": {
+        "type": "string",
+        "description": "Email address explicitly provided and confirmed for the booking, or 'unknown'."
+      },
+      "bookingConsent": {
+        "type": "boolean",
+        "description": "Whether the prospect explicitly agreed to book the read-back date, time, timezone, name, and email."
+      },
+      "bookingStatus": {
+        "type": "string",
+        "enum": ["booked", "pending", "failed", "declined", "not_offered", "unknown"],
+        "description": "Final booking status based on the bookCalendar-Make result. Use 'booked' only after explicit tool confirmation."
+      },
+      "bookingId": {
+        "type": "string",
+        "description": "Confirmed booking identifier returned by bookCalendar-Make, or 'unknown'."
+      },
+      "bookedStart": {
+        "type": "string",
+        "description": "Confirmed booked start date and time returned by bookCalendar-Make, or 'unknown'."
+      },
+      "bookedTimezone": {
+        "type": "string",
+        "description": "Confirmed booking timezone returned by bookCalendar-Make, or 'unknown'."
+      },
+      "agreedFollowUp": {
+        "type": "string",
+        "description": "Next step explicitly agreed during the call, or 'none'."
+      },
+      "callOutcome": {
+        "type": "string",
+        "enum": ["qualified_booked", "qualified_not_booked", "interested_more_discovery_needed", "not_interested", "not_a_fit", "incomplete"],
+        "description": "Primary call outcome."
+      },
+      "callSuccessful": {
+        "type": "boolean",
+        "description": "True when the prospect experienced a useful demo, meaningful qualification occurred, and the call reached an appropriate next step without unsupported claims or pressure."
+      }
+    },
+    "required": [
+      "summary",
+      "demoMode",
+      "businessType",
+      "currentCallHandling",
+      "mainOperationalProblem",
+      "approximateCallVolume",
+      "missedCallEstimate",
+      "genuineLeadEstimate",
+      "customerValue",
+      "opportunityScenario",
+      "desiredVoiceAiUse",
+      "mainObjection",
+      "interestLevel",
+      "potentialFit",
+      "prospectName",
+      "prospectEmail",
+      "bookingConsent",
+      "bookingStatus",
+      "bookingId",
+      "bookedStart",
+      "bookedTimezone",
+      "agreedFollowUp",
+      "callOutcome",
+      "callSuccessful"
+    ],
+    "additionalProperties": false
+  }
+}

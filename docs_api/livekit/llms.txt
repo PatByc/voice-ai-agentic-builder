@@ -1,0 +1,63 @@
+# LiveKit docs
+
+> LiveKit is an open-source platform for building voice, video, and physical AI agents. It includes the Agents framework for Python and Node.js, realtime WebRTC infrastructure with SDKs for every platform, telephony, and LiveKit Cloud, the hosted commercial offering.
+
+## Instructions for AI agents
+
+- Append `.md` to any page URL for clean Markdown, or send an `Accept: text/markdown` header.
+- Append `/llms.txt` to any of the section URLs listed below for the full page index of that section.
+- To search the docs or fetch many pages at once, connect to the MCP server at https://docs.livekit.io/mcp.
+
+## Overview
+
+LiveKit is an open-source platform for building voice, video, and physical AI agents, built on realtime WebRTC infrastructure. It consists of these primary components:
+
+- **LiveKit Agents framework**: Build AI agents in [Python](https://github.com/livekit/agents) or [Node.js](https://github.com/livekit/agents-js), with [LiveKit Inference](https://docs.livekit.io/agents/models.md#inference) and [plugins](https://docs.livekit.io/agents/models.md#plugins) for STT, LLM, TTS, and realtime models, and [deployment](https://docs.livekit.io/deploy/agents.md) to LiveKit Cloud.
+- **Agent frontends**: [Web and mobile UIs](https://docs.livekit.io/frontends.md) for talking to agents, including the Agents UI component library.
+- **Telephony**: [SIP integration](https://docs.livekit.io/telephony.md) for inbound and outbound phone calls.
+- **LiveKit server**: An open-source WebRTC SFU that routes realtime media and data. Run it on [LiveKit Cloud](https://docs.livekit.io/intro/cloud.md) or [self-host](https://docs.livekit.io/transport/self-hosting.md).
+- **Realtime SDKs**: Client and server SDKs for web, Swift, Android, Flutter, React Native, Unity, Python, Node.js, Rust, C++, ESP32, and more. See [LiveKit SDKs](https://docs.livekit.io/reference.md#livekit-sdks).
+- **Egress and Ingress**: [Recording and streaming](https://docs.livekit.io/transport/media/ingress-egress/egress.md) out of rooms, and [ingesting](https://docs.livekit.io/transport/media/ingress-egress/ingress.md) external media into them.
+
+How it fits together: every client, agent, and phone call joins a room as a participant and publishes or subscribes to audio, video, and data tracks. Frontends connect with an access token. An agent server runs your agent code and is dispatched into rooms as they need an agent. Telephony bridges phone calls into rooms as SIP participants.
+
+For greater detail, see [Intro to LiveKit](https://docs.livekit.io/intro/overview.md).
+
+## Documentation sections
+
+Each section has its own index that lists every page in the section with a description:
+
+- [Introduction](https://docs.livekit.io/intro/llms.txt): What LiveKit is, plus core concepts: rooms, participants, tracks, and how clients connect. Also covers LiveKit Cloud, the CLI, webhooks and events, and community resources. 16 pages.
+- [Build Agents](https://docs.livekit.io/agents/llms.txt): The LiveKit Agents framework for Python and Node.js: voice AI quickstart, agent sessions, tools and function calling, workflows, handoffs, tasks, turn detection and interruptions, RAG, the agent server (dispatch, jobs, lifecycle), and models: STT, LLM, TTS, realtime, avatars, and LiveKit Inference. 229 pages.
+- [Agent Frontends](https://docs.livekit.io/frontends/llms.txt): Web and mobile frontends for agents: React quickstart, starter apps, session management, authentication and tokens, agent state, realtime media and data, virtual avatars, devices, and Agents UI components. 31 pages.
+- [Test & Evaluate](https://docs.livekit.io/testing/llms.txt): Testing, evaluating, and observing agents: Agent Console for interactive debugging, a test framework built on pytest and Vitest, LLM-judged simulations in text and audio modes, and agent observability: session insights in LiveKit Cloud, data hooks, OpenTelemetry trace export, and PII redaction. 22 pages.
+- [Telephony](https://docs.livekit.io/telephony/llms.txt): SIP telephony for agents: phone numbers, inbound and outbound trunks, dispatch rules, provider setup (Twilio, Telnyx, Plivo, and more), WhatsApp and Twilio connectors, DTMF, call transfers, answering machine detection, region pinning, and the SIP API. 41 pages.
+- [Robotics](https://docs.livekit.io/robotics/llms.txt): LiveKit for robots and hardware devices: video and sensor data, latency and performance, teleoperation, remote inference, LiveKit Portal, Portal for ROS, and the Portal API. 36 pages.
+- [WebRTC Transport](https://docs.livekit.io/transport/llms.txt): Rooms, participants, and tracks in the client SDKs: camera, microphone, screen share, subscribing, raw track processing, codecs, noise cancellation, data messaging (text, files, RPC, data tracks), end-to-end encryption, Egress and Ingress, and self-hosting LiveKit server (local, VMs, Kubernetes, multi-region, firewalls). 59 pages.
+- [Manage & Deploy](https://docs.livekit.io/deploy/llms.txt): Deploying agents to LiveKit Cloud: deployment management, secrets, builds and Dockerfiles, logs and log drains, self-hosted deployments, and project administration: regions, firewalls, quotas and limits, billing, and the Analytics API. 30 pages.
+- [Reference](https://docs.livekit.io/reference/llms.txt): API and SDK reference: access tokens and grants, LiveKit CLI, Docs MCP server, Agents framework API for Python and Node.js, client SDK docs for every platform, UI component libraries, server API SDKs, SFU and signaling protocol internals, SIP and Egress APIs, and migration guides. 57 pages.
+- [React Components](https://docs.livekit.io/reference/components/react/llms.txt): LiveKit Components for React: installation, LiveKitRoom, contexts, loop and style components, rendering video and audio tracks, and reference for every hook and component. 132 pages.
+- [Agents UI Components](https://docs.livekit.io/reference/components/agents-ui/llms.txt): Agents UI, the shadcn-based React library for agent frontends: AgentSessionView block, media controls, audio visualizers, session management, chat transcript components, and a Next.js token route. 18 pages.
+- [Android Components](https://docs.livekit.io/reference/components/android/llms.txt): LiveKit Components for Android and Jetpack Compose: installation, RoomScope and other scopes, rendering tracks, samples, and API reference. 7 pages.
+- [Recipes](https://docs.livekit.io/reference/recipes/llms.txt): Example applications and code recipes for common LiveKit use cases, with links to source code. 39 pages.
+
+## Start here
+
+- [Voice AI quickstart](https://docs.livekit.io/agents/start/voice-ai.md): Build and deploy a simple voice assistant in less than 10 minutes.
+- [LiveKit Agents](https://docs.livekit.io/agents.md): Realtime framework for voice, video, and physical AI agents.
+- [AI models and providers](https://docs.livekit.io/agents/models.md): Choose the right AI models for your voice agent.
+- [Tool definition and use](https://docs.livekit.io/agents/logic/tools.md): Let your agents call external tools and more.
+- [Agent deployment](https://docs.livekit.io/deploy/agents.md): Overview of deploying agents, including deployment management, secrets, builds, logs, and monitoring.
+- [Agent frontends](https://docs.livekit.io/frontends.md): Build a custom web or mobile frontend for your LiveKit Agent.
+- [Telephony](https://docs.livekit.io/telephony.md): LiveKit's telephony services enable seamless integration between traditional phone networks and LiveKit's realtime platform.
+- [WebRTC transport](https://docs.livekit.io/transport.md): Build realtime applications with LiveKit's WebRTC transport layer, SDKs, and media handling capabilities.
+- [Reference](https://docs.livekit.io/reference.md): All reference documentation in the LiveKit ecosystem with links to complete docs, package registries, and source code.
+
+## Full documentation
+
+- [Complete documentation](https://docs.livekit.io/llms-full.txt): Every page of the docs site, inlined in full. This file is very large.
+
+---
+
+This document was rendered at 2026-10-17T08:44:24.843Z.
+For the latest version of this document, see [https://docs.livekit.io/llms.txt](https://docs.livekit.io/llms.txt).

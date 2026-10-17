@@ -1,0 +1,51 @@
+provider: Cal.com
+slug: cal-com
+canonical_docs: https://cal.com/docs/api-reference/v2
+api_base_url: https://api.cal.com/v2
+openapi_url: https://cal.com/docs/api-reference/v2/openapi.json
+llms_txt_url: https://cal.com/docs/llms.txt
+docs_repository: https://github.com/calcom/cal.diy
+sdk_repository: https://github.com/calcom/developer-starter-kit
+retrieved_at: 2026-11-06T08:40:36Z
+api_version: "v2; OpenAPI info.version 1.0.0"
+source_revision: null
+docs_repository_head_observed: 54343aa685ae8f33159d2f485ec4a57bad5c574a
+sdk_revision_observed: 5095882439600a0ce4e17955fac1c39f07764d0c
+license: MIT
+artifacts:
+  - path: REFERENCE.md
+    source: local-synthesis
+    sha256: ef6c145e82de5bfb7e0f177e52e4769bb3a168716378e387d3bc81b23aeab5d4
+  - path: openapi.json
+    source: https://cal.com/docs/api-reference/v2/openapi.json
+    sha256: cb7834e81b42982eba7ac2aacf3997e3dc7f09d292307edca20cae67f23beb25
+  - path: llms.txt
+    source: https://cal.com/docs/llms.txt
+    sha256: eb0aa1a981306d44db48dfb0bfc058e8e975bd37539d939cb0cea6ec6d9d8ae1
+  - path: guides/api-v2-introduction.md
+    source: https://cal.com/docs/api-reference/v2.md
+    sha256: eb6c1c4211aac99cf395800c2f105f810329e37996a1b949f020bb290bd0645d
+  - path: guides/available-slots.md
+    source: https://cal.com/docs/api-reference/v2/slots/get-available-time-slots-for-an-event-type.md
+    sha256: 1ef8e7bd1035bb79e2f7966b9c64cdfad946357243c4433b7997f78a4ef2e432
+  - path: guides/create-booking.md
+    source: https://cal.com/docs/api-reference/v2/bookings/create-a-booking.md
+    sha256: 290e2e415b4c8dd42b614655cd9d5127be94515fb1ecf94ff6d80fab610d4faf
+  - path: guides/list-bookings.md
+    source: https://cal.com/docs/api-reference/v2/bookings/get-all-bookings.md
+    sha256: adde842ee3580dede192576969a96b3cc4db953f3fa6d4e500e26fdb84183748
+  - path: guides/reschedule-booking.md
+    source: https://cal.com/docs/api-reference/v2/bookings/reschedule-a-booking.md
+    sha256: c8637c86f8f3c61cade39364aa4935519a840a0c0733d5d6f8aeccb59d457f33
+  - path: guides/cancel-booking.md
+    source: https://cal.com/docs/api-reference/v2/bookings/cancel-a-booking.md
+    sha256: 2902ed610862121917f938814ba3d8607e7ea5e33ebd8774d74c82010028c560
+  - path: guides/list-event-types.md
+    source: https://cal.com/docs/api-reference/v2/event-types/list-event-types.md
+    sha256: b7da92ef270fd7a2f10dc1d1e2221f14c311acaf5385ff52a9a03163e925dc96
+  - path: guides/create-webhook.md
+    source: https://cal.com/docs/api-reference/v2/webhooks/create-a-webhook.md
+    sha256: d27073ffdc6dfc277646591b303008a01ee06a4089e01c4c88cb475c692aa427
+  - path: guides/webhook-security.md
+    source: https://cal.com/docs/developing/guides/automation/webhooks.md
+    sha256: b6fe4fb4c0dc38507a1168e38433c6814e1c2d5bf065a82d35e82a5f168d41bb

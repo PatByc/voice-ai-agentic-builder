@@ -1,0 +1,83 @@
+provider: LiveKit
+slug: livekit
+canonical_docs: https://docs.livekit.io/
+api_base_url: null
+openapi_url: null
+llms_txt_url: https://docs.livekit.io/llms.txt
+docs_repository: null
+sdk_repository: https://github.com/livekit/python-sdks
+retrieved_at: 2026-10-17T08:45:37Z
+api_version: null
+source_revision: c45251b06f468f6095c5e4fd69b4cc12cc3fbe96
+agents_revision: ceb3d598f07e3bb865ea04a45f44ec5d8da3f062
+python_sdk_revision: 462e1032249f7163dba248045a159c847a9301f3
+agents_python_version: '1.8.8'
+python_api_version: '1.2.2'
+python_rtc_version: '1.1.21'
+license: Apache-2.0
+documentation_license: citation-only
+notes:
+  - LiveKit server APIs use Twirp/protobuf; no official OpenAPI document was identified.
+  - Public documentation pages are represented by local paraphrased guides with citations because a reusable license was not identified.
+  - Raw protobuf schemas and schemas/LICENSE come from the Apache-2.0 protocol repository.
+artifacts:
+  - path: REFERENCE.md
+    source: 'local synthesis from official sources listed in this file'
+    sha256: a636f868c6207716052d2849990102606cee18050dc3cc3acda30aeeb2c82dc7
+  - path: llms.txt
+    source: 'https://docs.livekit.io/llms.txt'
+    sha256: f5708e77c6df0b1071147beb1192d38a515b3047111fecaf3596bbf3a8078a30
+  - path: guides/agent-dispatch.md
+    source: 'https://docs.livekit.io/agents/server/agent-dispatch'
+    sha256: 1f4c0e596672dbf174df2a14349b1aed2814819b1b7f23fe1a426accb6cee89c
+  - path: guides/authentication.md
+    source: 'https://docs.livekit.io/frontends/build/authentication'
+    sha256: c31efef7889b5c6e7210c01461d2538a85cfb5c28192baf77b66dbb77b71c95d
+  - path: guides/deployment-and-limits.md
+    source: 'https://docs.livekit.io/deploy/admin/quotas-and-limits'
+    sha256: 9da57a966337dd8bedffdf2fc7efe3274d5470420c81290f6fc5dae57330ced7
+  - path: guides/server-api.md
+    source: 'https://docs.livekit.io/reference/other/roomservice-api'
+    sha256: 0558f565c0637e50dcb41bbc82182a381522f393c052c5afb9bbdfc359c766a4
+  - path: guides/telephony.md
+    source: 'https://docs.livekit.io/agents/start/telephony'
+    sha256: 2d49558037bd82966e727fa8e32fa1e04315f32a8f7ae94ed7154ca26184ddc3
+  - path: guides/voice-agents.md
+    source: 'https://docs.livekit.io/agents/start/voice-ai'
+    sha256: 716d96580ecaa2b558578d2efce17a6578273f27d0fdc4fc87ac3be14a679df6
+  - path: guides/webhooks.md
+    source: 'https://docs.livekit.io/home/server/webhooks'
+    sha256: 5d90a7af527e2485b3d4a5378ee48aeb7545d8202ceab70bc89cb51efd453f3c
+  - path: schemas/LICENSE
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/LICENSE'
+    sha256: 3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5
+  - path: schemas/livekit_agent.proto
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/protobufs/livekit_agent.proto'
+    sha256: 95b29f7cf53f3890c957bf1bece4f32ecaac8fc8b09aad4c024b40bf4b9b358e
+  - path: schemas/livekit_agent_dispatch.proto
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/protobufs/livekit_agent_dispatch.proto'
+    sha256: 1c615c0d749883bd67dfbc8bc8b4b58664cee02354c42c109a0377af7c78c6fb
+  - path: schemas/livekit_egress.proto
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/protobufs/livekit_egress.proto'
+    sha256: 1fe9823b896065996f7ef3ccd32e82cab40a15ef1d5e8e380de8986e88842cc7
+  - path: schemas/livekit_ingress.proto
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/protobufs/livekit_ingress.proto'
+    sha256: a56ea9c53ecdc9e68e965d00481d64bd09319091a729632d495225d9c8495c87
+  - path: schemas/livekit_metrics.proto
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/protobufs/livekit_metrics.proto'
+    sha256: 7ea6149c4533753b9be26bfadf706f96730d2d3aaeddf270e4e1971427ce5321
+  - path: schemas/livekit_models.proto
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/protobufs/livekit_models.proto'
+    sha256: 03c42f29ef21988b7ff06cd0a8e1432ad50d766f36edd2ed4bf9030bdaa74768
+  - path: schemas/livekit_room.proto
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/protobufs/livekit_room.proto'
+    sha256: 55411ea4a9492cbf4c71dd386bebbc92e938714412eb37feeae1301c41e8290a
+  - path: schemas/livekit_sip.proto
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/protobufs/livekit_sip.proto'
+    sha256: b167c07dea09188ec184d010f3c76f7ae2c3d326fda4bee78bd0059c0c411180
+  - path: schemas/livekit_webhook.proto
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/protobufs/livekit_webhook.proto'
+    sha256: b484b3b520e145bd5778f9b0892d7229ae76d8419e09d567b65e38ddfe766fa2
+  - path: schemas/logger/options.proto
+    source: 'https://github.com/livekit/protocol/blob/c45251b06f468f6095c5e4fd69b4cc12cc3fbe96/protobufs/logger/options.proto'
+    sha256: 078ab0b6b8a101009f6ba9fc6fb5dff7aca345faef27ae08d791456953d028d1

@@ -1,0 +1,135 @@
+# Cal.com Docs
+
+- [API v2 Reference (417 pages)](https://cal.com/docs/_llms/api-v2-reference.txt): Documentation for API v2 Reference.
+
+## Atoms
+
+### Getting Started
+
+- [Introduction to Cal.com Atoms](https://cal.com/docs/atoms/introduction.md): Embed Cal.com scheduling components directly into your application
+- [Setup](https://cal.com/docs/atoms/setup.md): Complete setup guide for Cal.com Atoms with OAuth
+- [Cal OAuth Provider](https://cal.com/docs/atoms/cal-oauth-provider.md)
+
+### Onboarding
+
+- [Onboarding Embed](https://cal.com/docs/atoms/onboarding-embed.md): Embed Cal.com account creation, onboarding, and OAuth authorization directly in your app
+
+### Booking
+
+- [Booker](https://cal.com/docs/atoms/booker.md)
+- [Booker Embed](https://cal.com/docs/atoms/booker-embed.md)
+
+### Event Types
+
+- [Event Type](https://cal.com/docs/atoms/event-type.md)
+- [List Event Types](https://cal.com/docs/atoms/list-event-types.md)
+
+### Availability
+
+- [Availability settings](https://cal.com/docs/atoms/availability-settings.md)
+- [Create schedule](https://cal.com/docs/atoms/create-schedule.md)
+- [List schedules](https://cal.com/docs/atoms/list-schedules.md)
+
+### Calendars
+
+- [Calendar settings](https://cal.com/docs/atoms/calendar-settings.md)
+- [Calendar view](https://cal.com/docs/atoms/calendar-view.md)
+- [Google calendar connect](https://cal.com/docs/atoms/google-calendar-connect.md)
+- [Outlook calendar connect](https://cal.com/docs/atoms/outlook-calendar-connect.md)
+- [Apple calendar connect](https://cal.com/docs/atoms/apple-calendar-connect.md)
+
+### Integrations
+
+- [Conferencing Apps](https://cal.com/docs/atoms/conferencing-apps.md)
+- [Stripe Connect](https://cal.com/docs/atoms/stripe-connect.md)
+- [Payment form](https://cal.com/docs/atoms/payment-form.md)
+
+### Utility
+
+- [Troubleshooter](https://cal.com/docs/atoms/troubleshooter.md)
+
+### Guides
+
+- [Managing booking fields](https://cal.com/docs/atoms/guides/booking-fields.md): Prefilling and / or making them read-only.
+- [Custom booking flow](https://cal.com/docs/atoms/guides/custom-booking-flow.md): Learn how to intercept a booking to introduce your custom flow and then submit the booking.
+- [Custom slot selection flow](https://cal.com/docs/atoms/guides/custom-slot-select-flow.md): Learn how to use handleSlotReservation for custom slot selection flows.
+- [Custom toasts](https://cal.com/docs/atoms/guides/replacing-toasts.md): Replace default cal.com toasts with your own
+
+### Hooks
+
+- [Bookings hooks](https://cal.com/docs/atoms/hooks/bookings-hooks.md): Overview of all the hooks associated with bookings.
+- [Calendars hooks](https://cal.com/docs/atoms/hooks/calendar-hooks.md): Overview of all the hooks associated with calendars.
+- [Event types hooks](https://cal.com/docs/atoms/hooks/event-types-hooks.md): Overview of all the hooks associated with event types.
+- [Team hooks](https://cal.com/docs/atoms/hooks/team-hooks.md): Overview of all the hooks associated with teams.
+- [User hooks](https://cal.com/docs/atoms/hooks/user-hooks.md): Overview of all the hooks associated with users.
+
+## Developing
+
+### Getting Started
+
+- [Local Development](https://cal.com/docs/developing/local-development.md)
+
+### Open Source Contribution
+
+- [Introduction](https://cal.com/docs/developing/open-source-contribution/introduction.md)
+- [Code styling](https://cal.com/docs/developing/open-source-contribution/code-styling.md)
+- [Pull requests](https://cal.com/docs/developing/open-source-contribution/pull-requests.md)
+- [Contributor's Guide](https://cal.com/docs/developing/open-source-contribution/contributors-guide.md)
+
+### Guides
+
+#### API Development
+
+- [How to Set Up the API in a Local Instance](https://cal.com/docs/developing/guides/api/how-to-setup-api-in-a-local-instance.md)
+
+#### App Store and Integration
+
+- [Build a greeter app](https://cal.com/docs/developing/guides/appstore-and-integration/build-a-greeter-app.md)
+- [How to build an app](https://cal.com/docs/developing/guides/appstore-and-integration/build-an-app.md)
+- [Assign people to a call from a CRM or database](https://cal.com/docs/developing/guides/appstore-and-integration/how-to-show-assigned-people-from-a-crm.md)
+- [Salesforce integration](https://cal.com/docs/developing/guides/appstore-and-integration/salesforce.md): Configure how Cal.com syncs booking data with Salesforce contacts, leads, and events.
+
+#### Auth and Provision
+
+- [Setting up OIDC with okta](https://cal.com/docs/developing/guides/auth-and-provision/how-to-setup-oidc-with-okta.md)
+- [How to setup scim with okta](https://cal.com/docs/developing/guides/auth-and-provision/how-to-setup-scim-with-okta.md)
+- [SSO setup](https://cal.com/docs/developing/guides/auth-and-provision/sso-setup.md)
+
+#### Security
+
+- [Audit logs](https://cal.com/docs/developing/guides/audit-logs.md): Track security and access control events across your organization
+
+#### Automation
+
+- [Webhooks](https://cal.com/docs/developing/guides/automation/webhooks.md)
+
+#### Atoms
+
+- [Add changesets](https://cal.com/docs/developing/guides/atoms/add-changesets.md)
+
+#### Email
+
+- [Setting up mailtrap for email testing](https://cal.com/docs/developing/guides/email/setup-mailtrap-for-email-testing.md)
+
+#### Embeds
+
+- [Embed Events](https://cal.com/docs/developing/guides/embeds/embed-events.md)
+- [Customize the embed with CSS variables](https://cal.com/docs/developing/guides/embeds/customize-embed-css-variables.md)
+
+#### Insights
+
+- [How to Add a New Booking Chart to Cal.com Insights Page](https://cal.com/docs/developing/guides/insights/add-new-booking-charts.md)
+
+## OpenAPI Specs
+
+- [openapi](/docs/api-reference/v2/openapi.json)
+
+> The links below point to documentation indexes. Follow each `/_llms/` index recursively until you reach documentation pages.
+
+## Indexes
+
+- [API v2 Reference (417 pages)](https://cal.com/docs/_llms/api-v2-reference.txt): Documentation for API v2 Reference.
+- [API v2 Reference / ORGANIZATIONS (163 pages)](https://cal.com/docs/_llms/api-v2-reference/organizations.txt): Documentation for API v2 Reference / ORGANIZATIONS.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

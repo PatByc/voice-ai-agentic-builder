@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "vapi": {
+      "url": "https://mcp.vapi.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer ${VAPI_API_KEY}"
+      }
+    },
+    "make": {
+      "url": "https://mcp.make.com"
+    }
+  }
+}

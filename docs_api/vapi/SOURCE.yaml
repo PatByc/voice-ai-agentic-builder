@@ -1,0 +1,54 @@
+provider: Vapi
+slug: vapi
+canonical_docs: https://docs.vapi.ai/
+api_base_url: https://api.vapi.ai
+openapi_url: https://raw.githubusercontent.com/VapiAI/docs/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/apis/api/openapi.json
+llms_txt_url: https://docs.vapi.ai/llms.txt
+docs_repository: https://github.com/VapiAI/docs
+sdk_repository: https://github.com/VapiAI/server-sdk-typescript
+retrieved_at: 2026-10-17T08:40:27Z
+api_version: '1.0'
+source_revision: 9c2d4590896be80f2c5e182c1972bcad068fc381
+sdk_revision: ce0b348412130447f18e77363de7a97ca12f244b
+sdk_package_version: 3.0.0
+license: MIT
+notes:
+  - The SDK repository is citation-only because no license file or package license field was found.
+  - API version is the OpenAPI info.version value; no version header was inferred.
+artifacts:
+  - path: REFERENCE.md
+    source: 'local-synthesis from retained official sources'
+    sha256: bf9124eb55a114dac586d4ae7062c3445f002c62aac96c5847a9e8b39ff05bab
+  - path: openapi.json
+    source: 'https://raw.githubusercontent.com/VapiAI/docs/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/apis/api/openapi.json'
+    sha256: b6bcee4f0b360a6b67b7e64043025643e7e01574aff097e87b1f740240202a98
+  - path: llms.txt
+    source: 'https://docs.vapi.ai/llms.txt'
+    sha256: bc29145d8e3dfb8e3e5afe086d9358c98d2befa3a22ac744283d5551f068ae00
+  - path: guides/api-keys.md
+    source: 'https://github.com/VapiAI/docs/blob/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/security-and-privacy/api-keys.mdx'
+    sha256: c8e48497802d29ed5a1bd06da9a5d4ce8a7a971a4813c0116a42d6c60087f55b
+  - path: guides/config-as-code.md
+    source: 'https://github.com/VapiAI/docs/blob/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/config-as-code.mdx'
+    sha256: 8155e908797dbbb56f86d065b29ba7c358346cd49a49a8c866eab7af8ffc4f07
+  - path: guides/assistants-quickstart.md
+    source: 'https://github.com/VapiAI/docs/blob/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/assistants/quickstart.mdx'
+    sha256: 4d926eaa1ff799489d41e44a3586aa95685a9763d8331256ea0c94e4e158a917
+  - path: guides/dynamic-variables.md
+    source: 'https://github.com/VapiAI/docs/blob/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/assistants/dynamic-variables.mdx'
+    sha256: b1325d77aede659961cd243568a7e3b96a497bcbb3043998cd171d4a6c4471c9
+  - path: guides/outbound-calls.md
+    source: 'https://github.com/VapiAI/docs/blob/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/calls/call-outbound.mdx'
+    sha256: 672c862fc79c8194079033788eb9a7c54535f2f2b346764c04d60868ed4fe685
+  - path: guides/function-tools.md
+    source: 'https://github.com/VapiAI/docs/blob/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/tools/custom-tools.mdx'
+    sha256: 268a9eba6ee5e1edb3b2811216513e758047fa1d922ebdd99a382166c455c4da
+  - path: guides/structured-outputs.md
+    source: 'https://github.com/VapiAI/docs/blob/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/assistants/structured-outputs.mdx'
+    sha256: b39a8b133156a24a5ebee3e5ffc84bcdd1cb5d0d380b7757852a2f1b8f42b33e
+  - path: guides/knowledge-base.md
+    source: 'https://github.com/VapiAI/docs/blob/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/knowledge-base/knowledge-base.mdx'
+    sha256: 3ccb57262f6b546ca26a24f9028aaa32e6663ff709255e584a10d8fde5863317
+  - path: guides/webhook-authentication.md
+    source: 'https://github.com/VapiAI/docs/blob/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/server-url/server-authentication.mdx'
+    sha256: cd5d4bc92459ee102420fed7c9cb8cd40f4c7b1cc238fcfe30e3bbb60706d756

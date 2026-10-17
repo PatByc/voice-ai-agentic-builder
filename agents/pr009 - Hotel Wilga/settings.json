@@ -1,0 +1,42 @@
+{
+  "project_code": "PR009",
+  "agent_name": "Hotel Wilga Receptionist PL",
+  "description": "Draft Polish inbound AI receptionist for Hotel Wilga in Kraków. Answers verified hotel questions and guides reservation inquiries to the hotel's published booking channels. No booking integration is configured.",
+  "provider": "vapi",
+  "account_id": "",
+  "provider_agent_id": "",
+  "status": "draft",
+  "niche": "hospitality",
+  "use_case": "inbound-receptionist",
+  "language": "pl",
+  "compliance": "approach-b-no-pii",
+  "voice": {
+    "provider": "cartesia",
+    "voice_id": "43e52207-96fc-4e01-aaf8-cae317e43fdb",
+    "model": "sonic-3.5",
+    "voice_name": "Kacper"
+  },
+  "model": {
+    "provider": "openai",
+    "model_id": "gpt-4.1"
+  },
+  "transcriber": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "pl"
+  },
+  "tools": [],
+  "variables": {
+    "today": "Current date and time (injected automatically)"
+  },
+  "artifactPlan": {
+    "recordingEnabled": false,
+    "transcriptPlan": {
+      "enabled": false
+    }
+  },
+  "trigger": "Inbound phone call to Hotel Wilga",
+  "created_at": "2026-09-21",
+  "updated_at": "2026-09-21",
+  "tags": ["inbound", "receptionist", "hospitality", "polish", "hotel-wilga"]
+}

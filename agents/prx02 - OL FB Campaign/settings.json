@@ -1,0 +1,56 @@
+{
+    "transcriber":  {
+                        "provider":  "deepgram",
+                        "language":  "pl",
+                        "model":  "nova-3"
+                    },
+    "tags":  [
+                 "outbound",
+                 "facebook-campaign",
+                 "voice-ai-demo",
+                 "qualification",
+                 "polish",
+                 "optimizelabs"
+             ],
+    "updated_at":  "2026-10-15",
+    "created_at":  "2026-10-15",
+    "provider":  "vapi",
+    "use_case":  "voice-ai-demo-qualification",
+    "compliance":  "no-recording-no-transcript",
+    "description":  "Outbound voice-agent demo and qualification agent for OptimizeLabs Facebook campaign leads. Demonstrates an agent głosowy, diagnoses call-handling friction, handles objections, checks live availability, and books qualified prospects through Cal.com via Make.",
+    "model":  {
+                  "model_id":  "gpt-live-1",
+                  "provider":  "openai",
+                  "speaker":  true,
+                  "reasoner_model_id":  "gpt-5.6-sol",
+                  "reasoning_effort":  "xhigh"
+              },
+    "project_code":  "PRX02",
+    "artifactPlan":  {
+                         "recordingEnabled":  false,
+                         "transcriptPlan":  {
+                                                "enabled":  false
+                                            }
+                     },
+    "variables":  {
+                      "today":  "Current date and time (injected automatically)"
+                  },
+    "account_id":  "vapi-1",
+    "tools":  [
+                  "search_faq",
+                  "checkCalendar-Make",
+                  "bookCalendar-Make"
+              ],
+    "agent_name":  "OptimizeLabs Agent Głosowy Demo PL",
+    "voice":  {
+                  "provider":  "openai",
+                  "voice_id":  "cedar",
+                  "model":  "tts-1",
+                  "voice_name":  "Cedar"
+              },
+    "provider_agent_id":  "",
+    "trigger":  "Facebook campaign lead expresses interest in an AI voice agent",
+    "status":  "draft",
+    "niche":  "cross-industry voice agents",
+    "language":  "pl"
+}

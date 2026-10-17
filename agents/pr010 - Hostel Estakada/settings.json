@@ -1,0 +1,47 @@
+{
+  "project_code": "PR010",
+  "agent_name": "Hostel Estakada Receptionist PL",
+  "description": "Draft Polish inbound AI receptionist for Hostel Pracowniczy ESTAKADA in Kraków. Answers accommodation questions and demonstrates static availability and invoice-based reservation requests. No live booking integration is configured.",
+  "provider": "vapi",
+  "account_id": "",
+  "provider_agent_id": "",
+  "status": "draft",
+  "niche": "worker-accommodation",
+  "use_case": "inbound-receptionist",
+  "language": "pl",
+  "compliance": "demo-synthetic-pii-only",
+  "voice": {
+    "provider": "cartesia",
+    "voice_id": "43e52207-96fc-4e01-aaf8-cae317e43fdb",
+    "model": "sonic-3.5",
+    "voice_name": "Kacper"
+  },
+  "model": {
+    "provider": "openai",
+    "model_id": "gpt-4.1"
+  },
+  "transcriber": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "pl"
+  },
+  "tools": [],
+  "variables": {
+    "now": "Vapi built-in current date and time, formatted for Europe/Warsaw in the prompt"
+  },
+  "artifactPlan": {
+    "recordingEnabled": false,
+    "transcriptPlan": {
+      "enabled": false
+    }
+  },
+  "trigger": "Inbound phone call to Hostel Pracowniczy ESTAKADA",
+  "lead_context": {
+    "decision_maker_name": "unknown",
+    "decision_maker_role": "Właściciel",
+    "verified": false
+  },
+  "created_at": "2026-09-21",
+  "updated_at": "2026-09-21",
+  "tags": ["inbound", "receptionist", "worker-hostel", "accommodation", "polish", "hostel-estakada"]
+}

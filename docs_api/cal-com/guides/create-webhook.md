@@ -1,0 +1,331 @@
+<!-- Source: https://cal.com/docs/api-reference/v2/webhooks/create-a-webhook.md -->
+<!-- Retrieved: 2026-11-06T08:40:36Z -->
+
+> ## Documentation Index
+> Fetch the complete documentation index at: https://cal.com/docs/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Create a webhook
+
+> If accessed using an OAuth access token, the `WEBHOOK_WRITE` scope is required.
+
+
+
+## OpenAPI
+
+````yaml /api-reference/v2/openapi.json post /v2/webhooks
+openapi: 3.0.0
+info:
+  title: Cal.com API v2
+  description: ''
+  version: 1.0.0
+  contact: {}
+servers: []
+security: []
+tags: []
+paths:
+  /v2/webhooks:
+    post:
+      tags:
+        - Webhooks
+      summary: Create a webhook
+      description: >-
+        If accessed using an OAuth access token, the `WEBHOOK_WRITE` scope is
+        required.
+      operationId: WebhooksController_createWebhook
+      parameters:
+        - name: Authorization
+          in: header
+          description: >-
+            value must be `Bearer <token>` where `<token>` is api key prefixed
+            with cal_
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateWebhookInputDto'
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserWebhookOutputResponseDto'
+components:
+  schemas:
+    CreateWebhookInputDto:
+      type: object
+      properties:
+        payloadTemplate:
+          type: string
+          description: >-
+            The template of the payload that will be sent to the subscriberUrl,
+            check cal.com/docs/core-features/webhooks for more information
+          example: >-
+            {"content":"A new event has been
+            scheduled","type":"{{type}}","name":"{{title}}","organizer":"{{organizer.name}}","booker":"{{attendees.0.name}}"}
+        active:
+          type: boolean
+        subscriberUrl:
+          type: string
+        triggers:
+          type: array
+          items:
+            type: string
+            enum:
+              - BOOKING_CREATED
+              - BOOKING_PAYMENT_INITIATED
+              - BOOKING_PAID
+              - BOOKING_RESCHEDULED
+              - BOOKING_REQUESTED
+              - BOOKING_CANCELLED
+              - BOOKING_REJECTED
+              - BOOKING_SEAT_REJECTED
+              - BOOKING_NO_SHOW_UPDATED
+              - BOOKING_LOCATION_UPDATED
+              - BOOKING_REASSIGNED
+              - BOOKING_SEAT_ACCEPTED
+              - FORM_SUBMITTED
+              - MEETING_ENDED
+              - MEETING_STARTED
+              - RECORDING_READY
+              - INSTANT_MEETING
+              - INSTANT_MEETING_ACCEPTED
+              - RECORDING_TRANSCRIPTION_GENERATED
+              - OOO_CREATED
+              - AFTER_HOSTS_CAL_VIDEO_NO_SHOW
+              - AFTER_GUESTS_CAL_VIDEO_NO_SHOW
+              - FORM_SUBMITTED_NO_EVENT
+              - ROUTING_FORM_FALLBACK_HIT
+              - DELEGATION_CREDENTIAL_ERROR
+              - WRONG_ASSIGNMENT_REPORT
+              - DELEGATION_CREDENTIAL_SECRET_ROTATION_FAILED
+              - DELEGATION_CREDENTIAL_ROTATION_REQUIRED
+              - DELEGATION_CREDENTIAL_SECRET_ROTATED
+              - CALENDAR_ENTRY_REJECTED
+          example:
+            - BOOKING_CREATED
+            - BOOKING_RESCHEDULED
+            - BOOKING_CANCELLED
+            - BOOKING_CONFIRMED
+            - BOOKING_REJECTED
+            - BOOKING_SEAT_REJECTED
+            - BOOKING_COMPLETED
+            - BOOKING_NO_SHOW
+            - BOOKING_REOPENED
+        secret:
+          type: string
+        customHeaders:
+          description: >-
+            Static HTTP headers sent on every webhook delivery (e.g.
+            Authorization). Max 10 headers, values up to 4 KiB, stored encrypted
+            and redacted on read. Changing `subscriberUrl` drops the stored
+            values unless you send them again. An instance without the webhook
+            header keyring (`CALCOM_KEYRING_WEBHOOK_HEADERS`) answers 400 to any
+            request that sends headers.
+          type: array
+          items:
+            $ref: '#/components/schemas/WebhookCustomHeaderInput'
+        version:
+          enum:
+            - '2021-10-20'
+            - '2026-07-27'
+          type: string
+          description: >-
+            The payload format version of the webhook. Version 2026-07-27 adds
+            generated ICS calendar content (`attendeeIcsContent`,
+            `organizerIcsContent`) to BOOKING_CREATED, BOOKING_RESCHEDULED,
+            BOOKING_CANCELLED, BOOKING_SEAT_ACCEPTED, and BOOKING_PAID (when the
+            payment accepted the booking) payloads. Every version's
+            builder-produced payload carries a `payload.platformOAuthClientId`
+            field naming the owning platform OAuth client (`null` for
+            non-platform events; for the flat-delivered
+            MEETING_STARTED/MEETING_ENDED bodies the field appears at the top
+            level of the body). Zapier deliveries, custom payload templates that
+            do not reference the field, the `AFTER_HOSTS_CAL_VIDEO_NO_SHOW` /
+            `AFTER_GUESTS_CAL_VIDEO_NO_SHOW` bodies (delivered verbatim from the
+            fire-time blob, never built) and the legacy
+            `FORM_SUBMITTED_NO_EVENT` fallback delivery omit it.
+          example: '2021-10-20'
+        time:
+          type: number
+          minimum: 1
+          description: >-
+            How long after the booking start time the no-show triggers are
+            evaluated. Required, together with timeUnit, when subscribing to
+            AFTER_HOSTS_CAL_VIDEO_NO_SHOW or AFTER_GUESTS_CAL_VIDEO_NO_SHOW
+          example: 5
+        timeUnit:
+          enum:
+            - DAY
+            - HOUR
+            - MINUTE
+          type: string
+          description: The unit of the no-show time value
+          example: MINUTE
+      required:
+        - active
+        - subscriberUrl
+        - triggers
+    UserWebhookOutputResponseDto:
+      type: object
+      properties:
+        status:
+          enum:
+            - success
+            - error
+          type: string
+          example: success
+        data:
+          $ref: '#/components/schemas/UserWebhookOutputDto'
+      required:
+        - status
+        - data
+    WebhookCustomHeaderInput:
+      type: object
+      properties:
+        name:
+          type: string
+          description: >-
+            HTTP header name, at most 256 characters. Names starting with
+            `X-Cal-` are reserved for Cal.com's own headers. Blocked names:
+            host, content-length, transfer-encoding, connection, keep-alive,
+            upgrade, trailer, te, proxy-authorization.
+          example: Authorization
+        value:
+          type: string
+          description: >-
+            HTTP header value. Omit (or send the redacted `"***"`) on update to
+            keep the stored value, as long as `subscriberUrl` stays the same:
+            stored values are never sent to a new URL. Values are stored
+            encrypted and are always redacted as `"***"` on read.
+          example: Bearer crsr_xxxxxxxxxxxxx
+      required:
+        - name
+    UserWebhookOutputDto:
+      type: object
+      properties:
+        payloadTemplate:
+          type: string
+          description: >-
+            The template of the payload that will be sent to the subscriberUrl,
+            check cal.com/docs/core-features/webhooks for more information
+          example: >-
+            {"content":"A new event has been
+            scheduled","type":"{{type}}","name":"{{title}}","organizer":"{{organizer.name}}","booker":"{{attendees.0.name}}"}
+        triggers:
+          type: array
+          items:
+            type: string
+            enum:
+              - BOOKING_CREATED
+              - BOOKING_PAYMENT_INITIATED
+              - BOOKING_PAID
+              - BOOKING_RESCHEDULED
+              - BOOKING_REQUESTED
+              - BOOKING_CANCELLED
+              - BOOKING_REJECTED
+              - BOOKING_SEAT_REJECTED
+              - BOOKING_NO_SHOW_UPDATED
+              - BOOKING_LOCATION_UPDATED
+              - BOOKING_REASSIGNED
+              - BOOKING_SEAT_ACCEPTED
+              - FORM_SUBMITTED
+              - MEETING_ENDED
+              - MEETING_STARTED
+              - RECORDING_READY
+              - INSTANT_MEETING
+              - INSTANT_MEETING_ACCEPTED
+              - RECORDING_TRANSCRIPTION_GENERATED
+              - OOO_CREATED
+              - AFTER_HOSTS_CAL_VIDEO_NO_SHOW
+              - AFTER_GUESTS_CAL_VIDEO_NO_SHOW
+              - FORM_SUBMITTED_NO_EVENT
+              - ROUTING_FORM_FALLBACK_HIT
+              - DELEGATION_CREDENTIAL_ERROR
+              - WRONG_ASSIGNMENT_REPORT
+              - DELEGATION_CREDENTIAL_SECRET_ROTATION_FAILED
+              - DELEGATION_CREDENTIAL_ROTATION_REQUIRED
+              - DELEGATION_CREDENTIAL_SECRET_ROTATED
+              - CALENDAR_ENTRY_REJECTED
+        customHeaders:
+          description: >-
+            Static headers sent on every delivery. Values are always redacted as
+            `"***"`.
+          type: array
+          items:
+            $ref: '#/components/schemas/WebhookCustomHeaderOutputDto'
+        time:
+          type: number
+          description: >-
+            How long after the booking start time the no-show triggers are
+            evaluated
+          example: 5
+        timeUnit:
+          enum:
+            - DAY
+            - HOUR
+            - MINUTE
+          type: string
+          description: The unit of the no-show time value
+          example: MINUTE
+        version:
+          enum:
+            - '2021-10-20'
+            - '2026-07-27'
+          type: string
+          description: >-
+            The payload format version of the webhook. Version 2026-07-27 adds
+            generated ICS calendar content (`attendeeIcsContent`,
+            `organizerIcsContent`) to BOOKING_CREATED, BOOKING_RESCHEDULED,
+            BOOKING_CANCELLED, BOOKING_SEAT_ACCEPTED, and BOOKING_PAID (when the
+            payment accepted the booking) payloads. Every version's
+            builder-produced payload carries a `payload.platformOAuthClientId`
+            field naming the owning platform OAuth client (`null` for
+            non-platform events; for the flat-delivered
+            MEETING_STARTED/MEETING_ENDED bodies the field appears at the top
+            level of the body). Zapier deliveries, custom payload templates that
+            do not reference the field, the `AFTER_HOSTS_CAL_VIDEO_NO_SHOW` /
+            `AFTER_GUESTS_CAL_VIDEO_NO_SHOW` bodies (delivered verbatim from the
+            fire-time blob, never built) and the legacy
+            `FORM_SUBMITTED_NO_EVENT` fallback delivery omit it.
+          example: '2021-10-20'
+        userId:
+          type: number
+        id:
+          type: number
+        subscriberUrl:
+          type: string
+        active:
+          type: boolean
+        secret:
+          type: string
+      required:
+        - payloadTemplate
+        - triggers
+        - version
+        - userId
+        - id
+        - subscriberUrl
+        - active
+    WebhookCustomHeaderOutputDto:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Authorization
+        value:
+          type: string
+          description: Always redacted; stored header values are never returned.
+          example: '***'
+      required:
+        - name
+        - value
+
+````
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

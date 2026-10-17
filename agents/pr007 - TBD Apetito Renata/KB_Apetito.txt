@@ -1,0 +1,1004 @@
+# Pizzas
+
+## 42. Margherita
+*Ingredients:* Ser  
+*Prices:*
+- S: 29,00 zł
+- M: 37,00 zł
+- X: 54,00 zł
+- XL: 72,00 zł
+
+## 43. Pescatore
+*Ingredients:* Tuńczyk  
+*Prices:*
+- S: 34,00 zł
+- M: 43,00 zł
+- X: 59,00 zł
+- XL: 78,00 zł
+
+## 44. Prosciutto
+*Ingredients:* Szynka  
+*Prices:*
+- S: 34,00 zł
+- M: 42,00 zł
+- X: 57,00 zł
+- XL: 78,00 zł
+
+## 45. Funghi
+*Ingredients:* Pieczarki  
+*Prices:*
+- S: 33,00 zł
+- M: 41,00 zł
+- X: 58,00 zł
+- XL: 76,00 zł
+
+## 46. Capricciosa
+*Ingredients:* Szynka, Pieczarki  
+*Prices:*
+- S: 35,00 zł
+- M: 45,00 zł
+- X: 61,00 zł
+- XL: 79,00 zł
+
+## 47. Campagnola
+*Ingredients:* Salami, Cebula  
+*Prices:*
+- S: 35,00 zł
+- M: 45,00 zł
+- X: 61,00 zł
+- XL: 79,00 zł
+
+## 48. Pompei
+*Ingredients:* Szynka, Cebula  
+*Prices:*
+- S: 35,00 zł
+- M: 45,00 zł
+- X: 61,00 zł
+- XL: 79,00 zł
+
+## 49. Mescolare
+*Ingredients:* Kebab, Pieczarki  
+*Prices:*
+- S: 37,00 zł
+- M: 45,00 zł
+- X: 62,00 zł
+- XL: 82,00 zł
+
+## 50. Bussola
+*Ingredients:* Szynka, Krewetki  
+*Prices:*
+- S: 39,00 zł
+- M: 47,00 zł
+- X: 65,00 zł
+- XL: 83,00 zł
+
+## 51. Hawaii
+*Ingredients:* Szynka, Ananas  
+*Prices:*
+- S: 37,00 zł
+- M: 45,00 zł
+- X: 61,00 zł
+- XL: 82,00 zł
+
+## 52. Venezia
+*Ingredients:* Salami, Papryka  
+*Prices:*
+- S: 36,00 zł
+- M: 45,00 zł
+- X: 60,00 zł
+- XL: 80,00 zł
+
+## 53. Kebap
+*Ingredients:* Kebab, Cebula  
+*Prices:*
+- S: 35,00 zł
+- M: 45,00 zł
+- X: 61,00 zł
+- XL: 80,00 zł
+
+## 54. Princessa
+*Ingredients:* Szynka, Ananas, Krewetki  
+*Prices:*
+- S: 43,00 zł
+- M: 49,00 zł
+- X: 72,00 zł
+- XL: 89,00 zł
+
+## 55. Rimini
+*Ingredients:* Szynka, Pieczarki, Cebula  
+*Prices:*
+- S: 38,00 zł
+- M: 45,00 zł
+- X: 64,00 zł
+- XL: 83,00 zł
+
+## 56. Amore
+*Ingredients:* Tuńczyk, Cebula  
+*Prices:*
+- S: 38,00 zł
+- M: 45,00 zł
+- X: 64,00 zł
+- XL: 83,00 zł
+
+## 57. Torino
+*Ingredients:* Pieczarki, Oliwki, Cebula  
+*Prices:*
+- S: 35,00 zł
+- M: 45,00 zł
+- X: 62,00 zł
+- XL: 81,00 zł
+
+## 58. Primavera
+*Ingredients:* Szynka, Salami, Cebula  
+*Prices:*
+- S: 39,00 zł
+- M: 46,00 zł
+- X: 64,00 zł
+- XL: 84,00 zł
+
+## 59. Vegetariana
+*Ingredients:* Papryka, Pieczarki, Kukurydza, Cebula, Oliwki  
+*Prices:*
+- S: 39,00 zł
+- M: 45,00 zł
+- X: 63,00 zł
+- XL: 84,00 zł
+
+## 60. Romana
+*Ingredients:* Kurczak, Cebula, Oliwki, Curry  
+*Prices:*
+- S: 38,00 zł
+- M: 46,00 zł
+- X: 64,00 zł
+- XL: 84,00 zł
+
+## 61. Verdebianco
+*Ingredients:* Kurczak, Szpinak, ser typu Feta  
+*Prices:*
+- S: 42,00 zł
+- M: 49,00 zł
+- X: 68,00 zł
+- XL: 89,00 zł
+
+## 62. Broccoli
+*Ingredients:* Brokuły, Camembert  
+*Prices:*
+- S: 38,00 zł
+- M: 48,00 zł
+- X: 67,00 zł
+- XL: 84,00 zł
+
+## 63. Pizza Polo
+*Ingredients:* Kurczak, Pieczarki, Curry  
+*Prices:*
+- S: 41,00 zł
+- M: 49,00 zł
+- X: 67,00 zł
+- XL: 85,00 zł
+
+## 64. Słoneczna
+*Ingredients:* Kurczak, Pomidor, Cebula, Kukurydza  
+*Prices:*
+- S: 40,00 zł
+- M: 48,00 zł
+- X: 66,00 zł
+- XL: 85,00 zł
+
+## 65. Allora
+*Ingredients:* Szynka, Kabanos, Groszek, Sos pomidorowy  
+*Prices:*
+- S: 40,00 zł
+- M: 47,00 zł
+- X: 65,00 zł
+- XL: 83,00 zł
+
+## 66. Wiosenna
+*Ingredients:* Tuńczyk, Kukurydza, Groszek, Cebula  
+*Prices:*
+- S: 39,00 zł
+- M: 46,00 zł
+- X: 62,00 zł
+- XL: 84,00 zł
+
+## 67. Bolognese
+*Ingredients:* Szynka, Salami, Papryka, Oliwki  
+*Prices:*
+- S: 39,00 zł
+- M: 46,00 zł
+- X: 64,00 zł
+- XL: 83,00 zł
+
+## 68. La Bella
+*Ingredients:* Szynka, Kabanos, Papryka, Oliwki  
+*Prices:*
+- S: 39,00 zł
+- M: 46,00 zł
+- X: 64,00 zł
+- XL: 83,00 zł
+
+## 69. Verona
+*Ingredients:* Szynka, Oliwki, Pomidor, Czosnek, Tabasco  
+*Prices:*
+- S: 39,00 zł
+- M: 46,00 zł
+- X: 64,00 zł
+- XL: 83,00 zł
+
+## 70. Mafioso
+*Ingredients:* Salami, Peperoni, Czosnek, Tabasco  
+*Prices:*
+- S: 40,00 zł
+- M: 49,00 zł
+- X: 66,00 zł
+- XL: 84,00 zł
+
+## 71. Ognista
+*Ingredients:* Szynka, Cebula, Peperoni, Tabasco  
+*Prices:*
+- S: 40,00 zł
+- M: 49,00 zł
+- X: 66,00 zł
+- XL: 84,00 zł
+
+## 72. Frutti Di Mare
+*Ingredients:* Tuńczyk, Małże, Anchois, Krewetki  
+*Prices:*
+- S: 44,00 zł
+- M: 51,00 zł
+- X: 73,00 zł
+- XL: 91,00 zł
+
+## 73. Caorole (ostra lub łagodna)
+*Ingredients:* Szynka, Kabanos, Peperoni, Pomidor, Oliwki  
+*Prices:*
+- S: 41,00 zł
+- M: 48,00 zł
+- X: 67,00 zł
+- XL: 85,00 zł
+
+## 74. Beverly Hills
+*Ingredients:* Salami, Szynka, Kabanos, Cebula, Papryka  
+*Prices:*
+- S: 42,00 zł
+- M: 48,00 zł
+- X: 67,00 zł
+- XL: 85,00 zł
+
+## 75. California
+*Ingredients:* Szynka, Pieczarki, Ananas, Czosnek  
+*Prices:*
+- S: 40,00 zł
+- M: 48,00 zł
+- X: 63,00 zł
+- XL: 83,00 zł
+
+## 78. Quatro Stagioni
+*Ingredients:* Szynka, Pieczarki, Małże, Oliwki, Kukurydza, Krewetki  
+*Prices:*
+- S: 44,00 zł
+- M: 53,00 zł
+- X: 73,00 zł
+- XL: 93,00 zł
+
+## 79. Polo Verdure
+*Ingredients:* Kurczak, Groszek, Kukurydza, Pomidor  
+*Prices:*
+- S: 41,00 zł
+- M: 49,00 zł
+- X: 68,00 zł
+- XL: 85,00 zł
+
+## 80. Chicken
+*Ingredients:* Kurczak  
+*Prices:*
+- S: 39,00 zł
+- M: 48,00 zł
+- X: 68,00 zł
+- XL: 82,00 zł
+
+## 81. Swojska
+*Ingredients:* Kiełbasa wędzona, Pomidor, Ogórek, Szczypiorek  
+*Prices:*
+- S: 41,00 zł
+- M: 48,00 zł
+- X: 64,00 zł
+- XL: 84,00 zł
+
+## 82. Wiejska
+*Ingredients:* Kiełbasa wędzona, Cebula, Pomidor, Czosnek  
+*Prices:*
+- S: 41,00 zł
+- M: 48,00 zł
+- X: 64,00 zł
+- XL: 85,00 zł
+
+## 83. Letnia
+*Ingredients:* Pomidor, Ogórek, Kukurydza, Szczypiorek  
+*Prices:*
+- S: 35,00 zł
+- M: 45,00 zł
+- X: 62,00 zł
+- XL: 80,00 zł
+
+## 84. Farmerska
+*Ingredients:* Szynka, Boczek, Kiełbasa, Pieczarki, Cebula, Papryka, Kukurydza  
+*Prices:*
+- S: 48,00 zł
+- M: 55,00 zł
+- X: 75,00 zł
+- XL: 92,00 zł
+
+## 85. Fromaggio
+*Ingredients:* Mozzarella, ser typu Feta, Camembert  
+*Prices:*
+- S: 44,00 zł
+- M: 52,00 zł
+- X: 69,00 zł
+- XL: 89,00 zł
+
+## 86. Grecka
+*Ingredients:* Ser typu Feta, Oliwki, Czosnek, Pomidor, Papryka  
+*Prices:*
+- S: 38,00 zł
+- M: 48,00 zł
+- X: 65,00 zł
+- XL: 85,00 zł
+
+## 87. Fantazja
+*Ingredients:* Ser  
+*Prices:*
+- S: 47,00 zł
+- M: 56,00 zł
+- X: 76,00 zł
+- XL: 93,00 zł
+
+## 88. Rucola
+*Ingredients:* Szynka szwarcwaldzka, Rukola, Pomidorki koktajlowe, Parmezan  
+*Prices:*  
+*(dostępne dwie wielkości)*  
+- M: 52,00 zł  
+- X: 68,00 zł
+
+## 89. Leśna
+*Ingredients:* Grzyby, Cebula, Kiełbasa biała, Sos śmietanowy  
+*Prices:*
+- S: 48,00 zł
+- M: 55,00 zł
+- X: 73,00 zł
+- XL: 92,00 zł
+
+## 90. Fresch Garden
+*Ingredients:* Kurczak, Sałatka grecka, Sos śmietanowy  
+*Prices:*
+- S: 48,00 zł
+- M: 57,00 zł
+- X: 75,00 zł
+- XL: 92,00 zł
+
+---
+
+# Sushi – Zestawy
+
+## Set 1
+*Ingredients:*  
+Futomaki kurczak w tempurze (+tempura na zewnątrz) 12szt, Futomaki z rybą maślaną 12szt, Futomaki łosoś w tempurze 12szt, Uramaki krewetki i węgorz 10szt, Uramaki surimi, tuńczyk, łosoś 10szt, Uramaki pasta z tuńczyka 10szt, Hosomaki mango 6szt, Hosomaki tuńczyk 6szt  
+*Price:* 339,00 zł
+
+## Set 2
+*Ingredients:*  
+Uramaki łosoś teriyaki 10szt, Uramaki pasta z ryby maślanej 10szt, Futomaki trio Fish 12szt, Futomaki kurczak w tempurze (+tempura na zewnątrz) 12szt, Hosomaki inari w tempurze 6szt, Hosomaki oshinko w tempurze 6szt, Hosomaki ogórek 6szt, Hosomaki awokado 6szt  
+*Price:* 248,00 zł
+
+## Set 3
+*Ingredients:*  
+Uramaki surimi i sezam 10szt, Uramaki łosoś teriyaki 10szt, Futomaki tuńczyk 12szt, Futomaki wegańskie w tempurze 12szt, Hosomaki kanpyo w tempurze 6szt  
+*Price:* 197,00 zł
+
+## Set 4
+*Ingredients:*  
+Uramaki wegetariańskie 10szt, Uramaki kurczak w tempurze 10szt, Uramaki Philadelphia 10szt, Hosomaki awokado 6szt, Hosomaki kanpyo 6szt  
+*Price:* 170,00 zł
+
+## Set 5
+*Ingredients:*  
+Futomaki łosoś teriyaki 12szt, Futomaki łosoś w tempurze 12szt, Futomaki paluszki surimi w tempurze (+tempura na zewnątrz) 12szt  
+*Price:* 148,00 zł
+
+## Set 6
+*Ingredients:*  
+Uramaki z pastą z ryby maślanej 10szt, Uramaki wegetariańskie 10szt, Futomaki z tuńczykiem grillowanym na ostro 12szt  
+*Price:* 140,00 zł
+
+---
+
+# Sushi – Hosomaki
+
+*(wszystkie: 6 sztuk)*
+
+## Hosomaki ogórek
+*Ingredients:* Ogórek  
+*Price:* 18,00 zł
+
+## Hosomaki oshinko
+*Ingredients:* Rzodkiew marynowana (oshinko)  
+*Price:* 18,00 zł
+
+## Hosomaki kanpyo
+*Ingredients:* Dynia kanpyo  
+*Price:* 19,00 zł
+
+## Hosomaki awokado
+*Ingredients:* Awokado  
+*Price:* 19,00 zł
+
+## Hosomaki łosoś surowy
+*Ingredients:* Łosoś  
+*Price:* 25,00 zł
+
+## Hosomaki krewetka gotowana
+*Ingredients:* Krewetka gotowana  
+*Price:* 36,00 zł
+
+## Hosomaki tuńczyk
+*Ingredients:* Tuńczyk  
+*Price:* 29,00 zł
+
+## Hosomaki mango
+*Ingredients:* Mango  
+*Price:* 18,00 zł
+
+## Hosomaki węgorz
+*Ingredients:* Węgorz  
+*Price:* 32,00 zł
+
+## Hosomaki inari
+*Ingredients:* Tofu inari  
+*Price:* 18,00 zł
+
+---
+
+# Sushi – Futomaki
+
+## Futomaki trio fish 6szt
+*Ingredients:* Łosoś, ryba maślana, tuńczyk, awokado, sałata, ogórek, wasabi  
+*Price:* 35,00 zł
+
+## Futomaki trio fish 12szt
+*Ingredients:* Łosoś, ryba maślana, tuńczyk, awokado, sałata, ogórek, wasabi  
+*Price:* 59,00 zł
+
+## Futomaki surimi w tempurze 6szt
+*Ingredients:* Paluszki surimi w tempurze, ogórek, kanpyo  
+*Price:* 32,00 zł
+
+## Futomaki surimi w tempurze 12szt
+*Ingredients:* Paluszki surimi w tempurze, ogórek, kanpyo  
+*Price:* 57,00 zł
+
+## Futomaki łosoś w tempurze 6szt
+*Ingredients:* Łosoś w tempurze, sałata, serek, ogórek  
+*Price:* 33,00 zł
+
+## Futomaki łosoś w tempurze 12szt
+*Ingredients:* Łosoś w tempurze, sałata, serek, ogórek  
+*Price:* 57,00 zł
+
+## Futomaki wegańskie 6szt
+*Ingredients:* Oshinko, ogórek, awokado, kanpyo, mango, inari  
+*Price:* 32,00 zł
+
+## Futomaki wegańskie 12szt
+*Ingredients:* Oshinko, ogórek, awokado, kanpyo, mango, inari  
+*Price:* 49,00 zł
+
+## Futomaki kurczak w tempurze 6szt
+*Ingredients:* Kurczak w tempurze, sałata, awokado, inari  
+*Price:* 30,00 zł
+
+## Futomaki kurczak w tempurze 12szt
+*Ingredients:* Kurczak w tempurze, sałata, awokado, inari  
+*Price:* 49,00 zł
+
+## Futomaki łosoś teriyaki 6szt
+*Ingredients:* Łosoś teriyaki, kanpyo, sałata, serek  
+*Price:* 33,00 zł
+
+## Futomaki łosoś teriyaki 12szt
+*Ingredients:* Łosoś teriyaki, kanpyo, sałata, serek  
+*Price:* 57,00 zł
+
+## Futomaki z tuńczykiem grillowanym na ostro 6szt
+*Ingredients:* Tuńczyk, serek, oshinko, kanpyo, sałata  
+*Price:* 40,00 zł
+
+## Futomaki z tuńczykiem grillowanym na ostro 12szt
+*Ingredients:* Tuńczyk, serek, oshinko, kanpyo, sałata  
+*Price:* 71,00 zł
+
+## Futomaki z tuńczykiem 6szt
+*Ingredients:* Tuńczyk, awokado, ogórek, sałata, oshinko, wasabi  
+*Price:* 40,00 zł
+
+## Futomaki z tuńczykiem 12szt
+*Ingredients:* Tuńczyk, awokado, ogórek, sałata, oshinko, wasabi  
+*Price:* 64,00 zł
+
+## Futomaki z rybą maślaną 6szt
+*Ingredients:* Ryba maślana, majonez japoński, awokado, ogórek, sałata, kanpyo, oshinko  
+*Price:* 40,00 zł
+
+## Futomaki z rybą maślaną 12szt
+*Ingredients:* Ryba maślana, majonez japoński, awokado, ogórek, sałata, kanpyo, oshinko  
+*Price:* 64,00 zł
+
+---
+
+# Sushi – Uramaki
+
+*(5 lub 10 sztuk)*
+
+## Uramaki surimi i sezam 5szt
+*Ingredients:* Sezam, paluszki surimi, awokado, majonez japoński  
+*Price:* 25,00 zł
+
+## Uramaki surimi i sezam 10szt
+*Ingredients:* Sezam, paluszki surimi, awokado, majonez japoński  
+*Price:* 43,00 zł
+
+## Uramaki surimi, łosoś i tuńczyk 5szt
+*Ingredients:* Sezam, paluszki surimi, awokado, majonez japoński, łosoś, tuńczyk  
+*Price:* 32,00 zł
+
+## Uramaki surimi, łosoś i tuńczyk 10szt
+*Ingredients:* Sezam, paluszki surimi, awokado, majonez japoński, łosoś, tuńczyk  
+*Price:* 59,00 zł
+
+## Uramaki philadelphia 5szt
+*Ingredients:* Łosoś, serek, szczypiorek, ogórek  
+*Price:* 31,00 zł
+
+## Uramaki philadelphia 10szt
+*Ingredients:* Łosoś, serek, szczypiorek, ogórek  
+*Price:* 59,00 zł
+
+## Uramaki łosoś 5szt
+*Ingredients:* Łosoś, tobiko, awokado, majonez japoński  
+*Price:* 39,00 zł
+
+## Uramaki łosoś 10szt
+*Ingredients:* Łosoś, tobiko, awokado, majonez japoński  
+*Price:* 71,00 zł
+
+## Uramaki krewetki i węgorz 5szt
+*Ingredients:* Krewetki w panko, awokado, majonez japoński, węgorz  
+*Price:* 47,00 zł
+
+## Uramaki krewetki i węgorz 10szt
+*Ingredients:* Krewetki w panko, awokado, majonez japoński, węgorz  
+*Price:* 88,00 zł
+
+## Uramaki kurczak w tempurze 5szt
+*Ingredients:* Kurczak w tempurze, kanpyo, awokado, mango  
+*Price:* 25,00 zł
+
+## Uramaki kurczak w tempurze 10szt
+*Ingredients:* Kurczak w tempurze, kanpyo, awokado, mango  
+*Price:* 45,00 zł
+
+## Uramaki łosoś teriyaki 5szt
+*Ingredients:* Łosoś teriyaki, awokado, sałata, majonez japoński  
+*Price:* 31,00 zł
+
+## Uramaki łosoś teriyaki 10szt
+*Ingredients:* Łosoś teriyaki, awokado, sałata, majonez japoński  
+*Price:* 55,00 zł
+
+## Uramaki z pastą z ryby maślanej 5szt
+*Ingredients:* Pasta z ryby maślanej, ogórek, sezam  
+*Price:* 25,00 zł
+
+## Uramaki z pastą z ryby maślanej 10szt
+*Ingredients:* Pasta z ryby maślanej, ogórek, sezam  
+*Price:* 45,00 zł
+
+## Uramaki wegetariańskie 5szt
+*Ingredients:* Mix warzyw, sezam (dokładny skład wg karty)  
+*Price:* 23,00 zł
+
+## Uramaki wegetariańskie 10szt
+*Ingredients:* Mix warzyw, sezam (dokładny skład wg karty)  
+*Price:* 40,00 zł
+
+---
+
+# Pita z kurczakiem i dodatkami
+
+## Pita z kurczakiem i serem
+*Ingredients:* Bułka pita, grillowany kurczak, ser żółty, surówka z białej kapusty, sałata lodowa, pomidor, ogórek, cebula, cebulka prażona  
+*Price:* 27,00 zł
+
+## Pita z kurczakiem i pieczarkami
+*Ingredients:* Bułka pita, grillowany kurczak, pieczarki, surówka z białej kapusty, sałata lodowa, pomidor, ogórek, cebula, cebulka prażona  
+*Price:* 27,00 zł
+
+## Pita z kurczakiem i pieczarkami i serem
+*Ingredients:* Bułka pita, grillowany kurczak, ser żółty, pieczarki, surówka z białej kapusty, sałata lodowa, pomidor, ogórek, cebula, cebulka prażona  
+*Price:* 27,00 zł
+
+---
+
+# Makarony
+
+## Spaghetti Bolognese
+*Ingredients:* Makaron spaghetti, sos mięsno-pomidorowy  
+*Price:* 36,00 zł
+
+## Tagiatelle Salmone Spinaci
+*Ingredients:* Makaron tagliatelle, łosoś, szpinak  
+*Price:* 41,00 zł
+
+## Pollo Con Fungi
+*Ingredients:* Makaron tagliatelle, kurczak, pieczarki, śmietana  
+*Price:* 41,00 zł
+
+---
+
+# Kebap
+
+## KebapBox
+*Ingredients:* Frytki 100g lub surówka 100g, mięso wołowo-drobiowe 100g, sos  
+*Price:* 22,00 zł
+
+## Doner Kebap
+*Ingredients:* Chleb turecki, mięso wołowo-drobiowe 100g, kapusta biała, kapusta czerwona, sałata lodowa, ogórek, pomidor, cebula, sos  
+*Price:* 24,00 zł
+
+## Doner Kebap Tzatziki
+*Ingredients:* Chleb turecki, mięso wołowo-drobiowe 100g, kapusta biała, kapusta czerwona, sałata lodowa, ogórek, pomidor, cebula, sos tzatziki  
+*Price:* 25,00 zł
+
+## Doner Kebap Specjal
+*Ingredients:* Chleb turecki, mięso wołowo-drobiowe 100g, kapusta biała, kapusta czerwona, sałata lodowa, pomidor, ogórek, papryka, kukurydza, ser a’la feta, oliwki, cebula, sos  
+*Price:* 28,00 zł
+
+## Doner Burger
+*Ingredients:* Bułka sezamowa, mięso wołowo-drobiowe 70g, kapusta biała, kapusta czerwona, sałata lodowa, pomidor, ogórek, cebula, sos  
+*Price:* 22,00 zł
+
+## Tortilla
+*Ingredients:* Placek pszenny, mięso wołowo-drobiowe, kapusta biała, kapusta czerwona, sałata lodowa, pomidor, ogórek, cebula, sos  
+*Price:* 22,00 zł
+
+## Tortilla Lux
+*Ingredients:* Placek pszenny, mięso wołowo-drobiowe 100g, kapusta biała, kapusta czerwona, sałata lodowa, ser a’la feta, oliwki, pomidor, ogórek, cebula, sos  
+*Price:* 28,00 zł
+
+## Frytkebap
+*Ingredients:* Chleb turecki, mięso wołowo-drobiowe 100g, kapusta biała, kapusta czerwona, sałata lodowa, frytki 80g, ogórek, pomidor, cebula, sos  
+*Price:* 28,00 zł
+
+## Frytrollo
+*Ingredients:* Placek pszenny, mięso wołowo-drobiowe 100g, kapusta biała, kapusta czerwona, sałata lodowa, frytki 80g, pomidor, ogórek, cebula, sos  
+*Price:* 29,00 zł
+
+## Kebap Zestaw
+*Ingredients:* Mięso wołowo-drobiowe, frytki lub ryż, kapusta czerwona, surówka z białej kapusty, cebula, sos  
+*Price:* 34,00 zł
+
+## Kebap Zestaw Lux
+*Ingredients:* Mięso wołowo-drobiowe, frytki lub ryż, sałatka grecka, sos  
+*Price:* 38,00 zł
+
+## MegaKebap
+*Ingredients:* Chleb turecki, mięso wołowo-drobiowe, kapusta biała, kapusta czerwona, sałata lodowa, pomidor, ogórek, cebula, sos  
+*Price:* 40,00 zł
+
+---
+
+# Chrupiący kurczak
+
+## Mega-Box
+*Ingredients:* 3x strips, 3x hot-wings, 10 kulek brokułowo-kalafiorowych, 10 popsów z kurczaka, 200g frytek, 150g surówki, sos  
+*Price:* 63,00 zł
+
+## ChickenBox
+*Ingredients:* 2 chrupiące polędwiczki, 3 skrzydełka Hot-Wings, frytki 150g, sos  
+*Price:* 39,00 zł
+
+## Kubełek Strips
+*Ingredients:* Strips z kurczaka (kubełek)  
+*Price:* 53,00 zł
+
+## Kubełek Hot Wings
+*Ingredients:* Skrzydełka Hot-Wings (kubełek)  
+*Price:* 44,00 zł
+
+## Popsy z kurczaka 15szt
+*Ingredients:* Kulki z fileta kurczaka w chrupiącej panierce  
+*Price:* 23,00 zł
+
+---
+
+# Zestawy
+
+## Limanda/Pstrąg
+*Ingredients:* Filet z limandy (soli) lub pstrąga, frytki 150g, surówka  
+*Price:* 48,00 zł
+
+## Zestaw Strips
+*Ingredients:* Strips 3 szt, frytki 150g, surówka  
+*Price:* 38,00 zł
+
+## Zestaw Hot Wings
+*Ingredients:* Wings 5 szt, frytki 150g, surówka  
+*Price:* 38,00 zł
+
+## Zestaw Specjal
+*Ingredients:* Strips 2 szt, wings 2 szt, frytki 150g, sos  
+*Price:* 33,00 zł
+
+## Shoarma z kurczaka
+*Ingredients:* Opiekane kawałki mięsa drobiowego, surówka, frytki, sos  
+*Price:* 33,00 zł
+
+## Shoarma z kurczaka Lux
+*Ingredients:* Opiekane kawałki mięsa drobiowego, sałatka grecka, frytki, sos  
+*Price:* 48,00 zł
+
+## Żeberko zapiekane
+*Ingredients:* Żeberko, kapusta zasmażana 200g, cząstki ziemniaków 200g  
+*Price:* 52,00 zł
+
+## Golonka
+*Ingredients:* Golonka 500g, kapusta zasmażana 200g, puree ziemniaczane 200g  
+*Price:* 63,00 zł
+
+## Filet drobiowy z pieczarkami i serem
+*Ingredients:* Panierowany filet z piersi kurczaka z pieczarkami zapiekany pod serem, frytki 150g, surówka  
+*Price:* 45,00 zł
+
+## Szalona Impreza Duża
+*Ingredients:* Popsy 12szt, shoarma 150g, kebap 150g, skrzydełka 6szt, polędwiczki 6szt, gyros 150g, frytki 150g, cząstki ziemniaków 200g, sałatka 150g, kapusta czerwona 150g, surówka koperkowa 150g, pity 3szt  
+*Price:* 230,00 zł
+
+## Szalona Impreza Mała
+*Ingredients:* Popsy 8szt, shoarma 100g, kebap 100g, skrzydełka 4szt, polędwiczki 4szt, gyros 100g, frytki 100g, cząstki ziemniaków 100g, sałatka 100g, kapusta czerwona 100g, surówka koperkowa 100g, pity 2szt  
+*Price:* 150,00 zł
+
+## Placki ziemniaczane z farszem myśliwskim
+*Ingredients:* Placki ziemniaczane z farszem  
+*Price:* 19,00 zł
+
+---
+
+# Sałatki
+
+## Sałatka Grecka
+*Ingredients:* Sałata lodowa, ogórek, pomidor, ser a’la feta, oliwki, cebula, sos vinegrette, sos tzatziki  
+*Price:* 32,00 zł
+
+## Sałatka z chrupiącym kurczakiem lub tuńczykiem
+*Ingredients:* Panierowana polędwiczka drobiowa lub tuńczyk, kapusta pekińska lub lodowa, ogórek, kukurydza, sos vinegrette, sos firmowy  
+*Price:* 35,00 zł
+
+## Sałatka włoska
+*Ingredients:* Sałata lodowa, rukola, mozzarella, pomidor koktajlowy, oliwki, parmezan, cebula, ocet balsamiczny, oliwa z oliwek  
+*Price:* 33,00 zł
+
+## Sałatka Shoarma
+*Ingredients:* Sałata lodowa, ogórek, pomidor, cebula, papryka, sos vinegrette, sos tzatziki  
+*Price:* 40,00 zł
+
+## Sałatka z grillowanym kurczakiem
+*Ingredients:* Grillowane polędwiczki drobiowe, sałata lodowa, rukola, pomidor, cebula, papryka, sos vinegrette  
+*Price:* 46,00 zł
+
+## Sałatka z krewetkami
+*Ingredients:* Krewetki, mix sałat, orzeszki ziemne, sos sezamowy  
+*Price:* 53,00 zł
+
+---
+
+# Chrupiące Kanapki
+
+## Zapiekanka firmowa z pieca
+*Ingredients:* Bagietka pszenna, pieczarki, ser żółty, surówka, pomidor, ogórek, groszek, kukurydza, szczypiorek, ketchup, sos indyjski  
+*Price:* 22,00 zł
+
+## Zapiekanka z pieca bez dodatków
+*Ingredients:* Bagietka pszenna, pieczarki, ser żółty, szczypiorek, ketchup, sos indyjski  
+*Price:* 22,00 zł
+
+## Zapiekanka z pieca z kebapem
+*Ingredients:* Bagietka pszenna, pieczarki, ser żółty, kebap, surówka, pomidor, ogórek, groszek, kukurydza, ketchup, sos indyjski  
+*Price:* 23,00 zł
+
+## Zapiekanka z rukolą
+*Ingredients:* Bagietka pszenna, pieczarki, ser żółty, rukola, pomidorki koktajlowe, cebulka prażona, sos czosnkowy  
+*Price:* 22,00 zł
+
+## Chickenburger
+*Ingredients:* Chrupiąca bułka, chrupiąca polędwiczka, sałata lodowa, ogórek konserwowy, sos firmowy  
+*Price:* 24,00 zł
+
+## Grandburger
+*Ingredients:* Chrupiąca bułka, sos BBQ, sałata lodowa, strips 2szt, ser żółty, pomidor, ogórek, bekon, cebula  
+*Price:* 26,00 zł
+
+## Knysza
+*Ingredients:* Chrupiąca bułka, sos, sałatka colesław, paski strips, pomidor, ogórek  
+*Price:* 27,00 zł
+
+## Twist
+*Ingredients:* Tortilla, sos, sałata lodowa, strips 2szt, pomidor, cebula, ogórek  
+*Price:* 23,00 zł
+
+---
+
+# Zupy
+
+## Gulaszowa
+*Price:* 14,00 zł
+
+## Flaki wołowe
+*Price:* 14,00 zł
+
+## Pomidorowa
+*Price:* 11,00 zł
+
+## Żurek
+*Price:* 11,00 zł
+
+---
+
+# Dodatki
+
+## Frytki 100g
+*Price:* 10,00 zł
+
+## Cząstki ziemniaków 150g
+*Price:* 13,00 zł
+
+## Ryż 150g
+*Price:* 10,00 zł
+
+## Surówka 150g
+*Price:* 10,00 zł
+
+## Sos 150g
+*Price:* 5,00 zł
+
+## Tzatziki 50ml
+*Price:* 7,00 zł
+
+## Dodatkowe opakowanie
+*Price:* 2,50 zł
+
+## Puree ziemniaczane 200g
+*Price:* 13,00 zł
+
+---
+
+# Napoje
+
+## Sok Toma Jabłkowy
+*Prices:*
+- 0,33L: 8,00 zł
+
+## Pepsi
+*Prices:*
+- 0,5L: 9,00 zł
+- 0,85L: 11,00 zł
+
+## Mirinda
+*Prices:*
+- 0,5L: 9,00 zł
+- 0,85L: 11,00 zł
+
+## Sok Toma Czarna porzeczka
+*Prices:*
+- 0,33L: 8,00 zł
+
+## Sok Toma Pomarańczowy
+*Prices:*
+- 0,33L: 8,00 zł
+
+## Piwo Perła Mocna
+*Prices:*
+- 0,5L: 10,00 zł
+
+## Piwo Perła Miodowa
+*Prices:*
+- 0,5L: 10,00 zł
+
+## Piwo Perła Chmielowa
+*Prices:*
+- 0,5L: 10,00 zł
+
+## Piwo bezalkoholowe
+*Prices:*
+- 0,5L: 10,00 zł
+
+## Piwo Zwierzyniec
+*Prices:*
+- 0,33L: 8,00 zł
+
+## Piwo Porter
+*Prices:*
+- 0,5L: 10,00 zł
+
+---
+
+# Gyros
+
+## Gyros w Chlebie
+*Ingredients:* Chleb turecki, mięso wieprzowe 100g, kapusta biała, kapusta czerwona, sałata lodowa, ogórek, pomidor, cebula, sos  
+*Price:* 26,00 zł
+
+## Gyros Tzatziki
+*Ingredients:* Chleb turecki, mięso wieprzowe 100g, kapusta biała, kapusta czerwona, sałata lodowa, ogórek, pomidor, cebula, sos tzatziki  
+*Price:* 27,00 zł
+
+## Gyros Specjal
+*Ingredients:* Chleb turecki, mięso wieprzowe 100g, kapusta biała, kapusta czerwona, sałata lodowa, pomidor, ogórek, papryka, kukurydza, ser a’la feta, oliwki, cebula, sos  
+*Price:* 30,00 zł
+
+## Gyros Burger
+*Ingredients:* Bułka sezamowa, mięso wieprzowe 70g, kapusta biała, kapusta czerwona, sałata lodowa, pomidor, ogórek, cebula, sos  
+*Price:* 23,50 zł
+
+## Gyros w Tortilli
+*Ingredients:* Placek pszenny, mięso wieprzowe, kapusta biała, kapusta czerwona, sałata lodowa, pomidor, ogórek, cebula, sos  
+*Price:* 23,00 zł
+
+## Gyros w Tortilli Lux
+*Ingredients:* Placek pszenny, mięso wieprzowe 100g, kapusta biała, kapusta czerwona, sałata lodowa, ser a’la feta, oliwki, pomidor, ogórek, cebula, sos  
+*Price:* 31,00 zł
+
+## Gyros Frytki
+*Ingredients:* Mięso wieprzowe 100g, frytki 150g, sos  
+*Price:* 30,00 zł
+
+## Gyros Surówki
+*Ingredients:* Mięso wieprzowe 100g, surówka z białej i czerwonej kapusty 150g, sos  
+*Price:* 30,00 zł
+
+## Gyros Zestaw
+*Ingredients:* Mięso wieprzowe, frytki lub ryż, kapusta czerwona, surówka z białej kapusty, cebula, sos  
+*Price:* 37,00 zł
+
+## Gyros Zestaw Lux
+*Ingredients:* Mięso wieprzowe, frytki lub ryż, sałatka grecka, sos  
+*Price:* 39,00 zł
+
+---
+
+# Mega dania
+
+## Kotlet schabowy
+*Ingredients:* Schabowy panierowany, frytki 150g, zestaw surówek 150g  
+*Price:* 54,00 zł
+
+## Grillowany Filet drobiowy
+*Ingredients:* Grillowany filet drobiowy, frytki 150g, zestaw surówek 150g, sos  
+*Price:* 53,00 zł
+
+## Talerz mega mix
+*Ingredients:* Kebap 100g, shoarma z kurczaka 100g, 2x stripsy, 2x hot wings, frytki 200g, zestaw surówek 150g, sos  
+*Price:* 59,00 zł
+
+---
+
+# Ufo burger
+
+## Ufo burger z nuggetsami
+*Ingredients:* Chrupiąca bułka UFO, nuggets z kurczaka  
+*Price:* 18,00 zł
+
+## Ufo burger z polędwiczkami
+*Ingredients:* Chrupiąca bułka UFO, polędwiczki z kurczaka  
+*Price:* 18,00 zł
+
+## Ufo burger z szarpaną wołowiną
+*Ingredients:* Chrupiąca bułka UFO, szarpana wołowina  
+*Price:* 24,00 zł

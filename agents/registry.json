@@ -1,0 +1,77 @@
+{
+  "agents": [
+    {
+      "project_code": "PRX01",
+      "agent_name": "Optimize Labs Outbound PL",
+      "provider": "vapi",
+      "account_id": "vapi-1",
+      "status": "live",
+      "folder": "prx01 - Optimize Labs"
+    },
+    {
+      "project_code": "PRX02",
+      "agent_name": "OptimizeLabs Agent Głosowy Demo PL",
+      "provider": "vapi",
+      "account_id": "vapi-1",
+      "status": "draft",
+      "folder": "prx02 - OL FB Campaign"
+    },
+    {
+      "project_code": "PR004",
+      "agent_name": "Factolex Receptionist PL",
+      "provider": "vapi",
+      "account_id": "vapi-1",
+      "status": "live",
+      "folder": "pr004 - Factolex"
+    },
+    {
+      "project_code": "PR005",
+      "agent_name": "JETSET CLINIC Receptionist PL",
+      "provider": "vapi",
+      "account_id": "",
+      "status": "draft",
+      "folder": "pr005 - JETSET CLINIC"
+    },
+    {
+      "project_code": "PR006",
+      "agent_name": "Koczorowscy Receptionist PL",
+      "provider": "vapi",
+      "account_id": "",
+      "status": "draft",
+      "folder": "pr006 - Koczorowscy"
+    },
+    {
+      "project_code": "PR007",
+      "agent_name": "Apetito Renata PL",
+      "provider": "vapi",
+      "account_id": "",
+      "status": "draft",
+      "folder": "pr007 - TBD Apetito Renata"
+    },
+    {
+      "project_code": "PR008",
+      "agent_name": "Hotel Baltic Sands Receptionist PL",
+      "provider": "vapi",
+      "account_id": "",
+      "status": "draft",
+      "folder": "pr008 - Hotel Baltic Sands"
+    },
+    {
+      "project_code": "PR009",
+      "agent_name": "Hotel Wilga Receptionist PL",
+      "provider": "vapi",
+      "account_id": "",
+      "status": "draft",
+      "folder": "pr009 - Hotel Wilga"
+    },
+    {
+      "project_code": "PR010",
+      "agent_name": "Hostel Estakada Receptionist PL",
+      "provider": "vapi",
+      "account_id": "",
+      "status": "draft",
+      "folder": "pr010 - Hostel Estakada"
+    }
+  ],
+  "_next_code": "PR011"
+}

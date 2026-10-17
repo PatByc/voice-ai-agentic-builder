@@ -1,0 +1,328 @@
+<!-- Canonical: https://docs.vapi.ai/tools/custom-tools -->
+<!-- Source: https://github.com/VapiAI/docs/blob/9c2d4590896be80f2c5e182c1972bcad068fc381/fern/tools/custom-tools.mdx -->
+<!-- Retrieved: 2026-10-17 -->
+
+---
+title: Function tools
+subtitle: Connect an assistant to your own server logic with a Function tool
+slug: tools/custom-tools
+description: Create and manage Function tools through the Vapi dashboard or API, connect them to server-side logic, test webhooks locally, and reuse them across assistants.
+---
+
+This guide shows you how to create Function tools for your Vapi assistants. The dashboard labels this tool type **Function tool**, and the API identifies it as `type: "function"`.
+
+We recommend using the Vapi dashboard's dedicated Tools section, which provides a visual interface for creating and managing tools that can be reused across multiple assistants. For advanced users, API configuration is also available.
+
+<Note>
+  Not sure which tool type to use? See [When to use API Request or Function tools](/tools/api-request-vs-function) before configuring your integration.
+</Note>
+
+## Creating Tools in the Dashboard (Recommended)
+
+### Step 1: Navigate to the Tools Section
+
+1. Open your [Vapi Dashboard](https://dashboard.vapi.ai)
+2. Click **Tools** in the left sidebar
+3. Click **Create Tool** to start building your Function tool
+
+### Step 2: Configure Your Tool
+
+The dashboard provides a user-friendly interface to configure your tool:
+
+1. **Tool Type**: Select **Function tool** for custom API integrations
+2. **Tool Name**: Give your tool a descriptive name (e.g., "Weather Lookup")
+3. **Description**: Explain what your tool does
+4. **Tool Configuration**:
+   - **Tool Name**: The identifier for your function (e.g., `get_weather`)
+   - **Parameters**: Define the input parameters your function expects
+   - **Server URL**: The endpoint where your function is hosted
+
+### Step 3: Configure Messages
+
+Set up the messages your assistant will speak during tool execution. For example, if you want custom messages you can add something like this:
+
+- **Request Start**: "Checking the weather forecast. Please wait..."
+- **Request Complete**: "The weather information has been retrieved."
+- **Request Failed**: "I couldn't get the weather information right now."
+- **Request Delayed**: "There's a slight delay with the weather service."
+
+### Step 4: Advanced Settings
+
+Configure additional options:
+- **Async Mode**: Enable if the tool should run asynchronously
+- **Timeout Settings**: Set how long to wait for responses
+- **Error Handling**: Define fallback behaviors
+
+## Example: Creating a Weather Tool
+
+Let's walk through creating a weather lookup tool:
+
+### Dashboard Configuration
+
+1. **Tool Name**: "Weather Lookup"
+2. **Description**: "Retrieves current weather information for any location"
+3. **Function Name**: `get_weather`
+4. **Parameters**:
+   - `location` (string, required): "The city or location to get weather for"
+5. **Server URL**: `https://api.openweathermap.org/data/2.5/weather`
+
+<Note>
+This example uses OpenWeatherMap's free API. You'll need to sign up at [openweathermap.org](https://openweathermap.org/api) to get a free API key and add it as a query parameter: `?appid=YOUR_API_KEY&q={location}`
+</Note>
+
+### Messages Configuration
+
+- **Request Start**: "Let me check the current weather for you..."
+- **Request Complete**: "Here's the weather information you requested."
+- **Request Failed**: "I'm having trouble accessing weather data right now."
+
+## Using Tools in Assistants
+
+Once created, your tools can be easily added to any assistant:
+
+### In the Dashboard
+
+1. Go to **Assistants** → Select your assistant
+2. Navigate to the **Tools** tab
+3. Click **Add Tool** and select your Function tool from the dropdown
+4. Save your assistant configuration
+
+### Using the Vapi CLI
+
+Manage your Function tools directly from the terminal:
+
+```bash
+# List all tools
+vapi tool list
+
+# Get tool details
+vapi tool get <tool-id>
+
+# Create a new tool (interactive)
+vapi tool create
+
+# Test a tool with sample data
+vapi tool test <tool-id>
+
+# Delete a tool
+vapi tool delete <tool-id>
+```
+
+Use the Vapi CLI to forward tool calls to your local server:
+
+```bash
+# Terminal 1: Create tunnel (e.g., with ngrok)
+ngrok http 4242
+
+# Terminal 2: Forward events
+vapi listen --forward-to localhost:3000/tools/webhook
+```
+
+<Note>
+`vapi listen` is a local forwarder that requires a separate tunneling service. Configure your tool's server URL to use the tunnel's public URL for testing. [Learn more →](/cli/webhook)
+</Note>
+
+## Other tool types that accept `function.parameters`
+
+Function tools are not the only tool type where you can define an LLM-facing JSON schema. Several other tool types accept the same `function.parameters` customization, so the dashboard's **Parameters** editor (or the `function` field in the API) works the same way across them.
+
+| Tool type                                                                                                                                                                | Customer-defined `function.parameters`?                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `function` (Function tool)                                                                                                                                               | Yes — the entire purpose of this tool type.                                                                                                                                                            |
+| `apiRequest`                                                                                                                                                             | Yes — drives both the LLM-supplied arguments and the request body construction.                                                                                                                        |
+| `handoff`                                                                                                                                                                | Yes — fills handoff-time arguments inline. See [Approach 1 in the squads guide](/squads/passing-data-between-assistants#approach-1-handoff-arguments).                                                  |
+| `transferCall`, `endCall`, `dtmf`, `voicemail`, `sms`, `slack-send-message`, GHL/Google integrations, `mcp`, Anthropic-native (`bash`, `computer`, `textEditor`) | No — the schema is Vapi-controlled or auto-derived from the underlying integration; you do not define it directly.                                                                                     |
+
+For tool types that accept customer-defined `function.parameters`, you can also pair them with **static parameters** -- a separate top-level `parameters` array on the tool that merges server-trusted values into the body without the LLM ever seeing them. See [Static variables and aliases](/tools/static-variables-and-aliases) for the full pattern, including when to use static parameters as a security boundary.
+
+## Alternative: API Configuration
+
+For advanced users who prefer programmatic control, you can also create and manage tools via the Vapi API:
+
+### Creating Tools via API
+
+```bash
+curl --location 'https://api.vapi.ai/tool' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <YOUR_API_KEY>' \
+--data '{
+    "type": "function",
+    "function": {
+        "name": "get_weather",
+        "description": "Retrieves current weather information for any location",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "location": {
+                    "type": "string",
+                    "description": "The city or location to get weather for"
+                }
+            },
+            "required": ["location"]
+        }
+    },
+    "server": {
+        "url": "https://api.openweathermap.org/data/2.5/weather"
+    }
+}'
+```
+
+### Adding Tools to Assistants via API
+
+```bash
+curl --location --request PATCH 'https://api.vapi.ai/assistant/ASSISTANT_ID' \
+--header 'Authorization: Bearer <YOUR_API_KEY>' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": {
+        "provider": "openai",
+        "model": "gpt-4o",
+        "toolIds": ["your-tool-id-here"]
+    }
+}'
+```
+
+## Request Format: Understanding the Tool Call Request
+
+When your server receives a tool call request from Vapi, it will be in the following format:
+
+```json
+{
+    "message": {
+        "timestamp": 1678901234567,
+        "type": "tool-calls",
+        "toolCallList": [
+            {
+                "id": "toolu_01DTPAzUm5Gk3zxrpJ969oMF",
+                "type": "function",
+                "function": {
+                    "name": "get_weather",
+                    "arguments": {
+                        "location": "San Francisco"
+                    }
+                }
+            }
+        ],
+        "toolWithToolCallList": [
+            {
+                "type": "function",
+                "function": {
+                    "name": "get_weather",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "location": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "description": "Retrieves the current weather for a specified location"
+                },
+                "server": {
+                    "url": "https://api.openweathermap.org/data/2.5/weather"
+                },
+                "messages": [],
+                "toolCall": {
+                    "id": "toolu_01DTPAzUm5Gk3zxrpJ969oMF",
+                    "type": "function",
+                    "function": {
+                        "name": "get_weather",
+                        "arguments": {
+                            "location": "San Francisco"
+                        }
+                    }
+                }
+            }
+        ],
+        "artifact": {
+            "messages": []
+        },
+        "assistant": {
+            "name": "Weather Assistant",
+            "description": "An assistant that provides weather information",
+            "model":{},
+            "voice":{},
+            "artifactPlans":{},
+            "startSpeakingPlan":{}
+        },
+        "call": {
+            "id": "call-uuid",
+            "orgId": "org-uuid",
+            "type": "webCall",
+            "assistant": {}
+        }
+    }
+}
+```
+
+<Note>
+For the complete API reference, see [ServerMessageToolCalls Type Definition](https://github.com/VapiAI/server-sdk-typescript/blob/main/src/api/types/ServerMessageToolCalls.ts#L7).
+</Note>
+
+
+## Server Response Format: Providing Results and Context
+
+When your Vapi assistant calls a tool (via the server URL you configured), your server will receive an HTTP request containing information about the tool call. Upon processing the request and executing the desired function, your server needs to send back a response in the following JSON format:
+
+
+```json
+{
+    "results": [
+        {
+            "toolCallId": "X",
+            "result": "Y"
+        }
+    ]
+}
+```
+
+**Breaking down the components:**
+
+- **toolCallId (X):** This is a unique identifier included in the initial request from Vapi. It allows the assistant to match the response with the corresponding tool call, ensuring accurate processing and context preservation.
+- **result (Y):** This field holds the actual output or result of your tool's execution on success. It must be a flat string -- not an object, array, or multi-line value. If your tool's output isn't already a string, serialize it (for example with `JSON.stringify`) before returning it.
+- **error:** Use this field instead of `result` when the tool call fails. Vapi decides whether to speak the `Request Failed` message by checking for the *presence* of an `error` field on the result -- it does not inspect `result`'s content for failure text. `error` must also be a flat string, and a response can use `result` or `error` per `toolCallId`, but not both.
+
+<Note>
+Always respond with HTTP 200, even when reporting a tool failure through `error`. Any other status code is ignored completely, and the assistant reports "no result returned" instead of speaking your error message. See [Troubleshoot tools](/tools/custom-tools-troubleshooting) for more response-format failure modes.
+</Note>
+
+**Example:**
+
+Let's revisit the weather tool example from before. If the tool successfully retrieves the weather for a given location, the server response might look like this:
+
+```json
+{
+  "results": [
+    {
+      "toolCallId": "call_VaJOd8ZeZgWCEHDYomyCPfwN",
+      "result": "San Francisco's weather today is 62°C, partly cloudy."
+    }
+  ]
+}
+```
+
+If the location can't be found, report the failure through `error` instead of `result` -- Vapi still expects HTTP 200:
+
+```json
+{
+  "results": [
+    {
+      "toolCallId": "call_VaJOd8ZeZgWCEHDYomyCPfwN",
+      "error": "No weather data found for that location."
+    }
+  ]
+}
+```
+
+For multiple tool calls in one request, return a result for every call in the `results` array and match each result to its call with `toolCallId`. Results can appear in any order. Use `result` for success and `error` for failure.
+
+To inspect a Function tool call, open its [call log](/observability/logs/call-logs#function-and-api-request-tools). The call's **Messages** tab shows the tool call and result. **Logs → Webhooks** shows the Function webhook request and response.
+
+**Some Key Points:**
+
+- Pay attention to the required parameters and response format of your functions.
+- Ensure your server is accessible and can handle the incoming requests from Vapi.
+- Make sure to add "Tools Calls" in both the Server and Client messages and remove the function calling from it.
+- Always return HTTP 200, and use the `error` field -- not a non-2xx status code -- to signal that a specific tool call failed.
+
+By following these guidelines and adapting the sample payload, you can easily configure a variety of tools to expand your Vapi assistant's capabilities and provide a richer, more interactive user experience.

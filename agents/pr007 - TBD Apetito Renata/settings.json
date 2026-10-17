@@ -1,0 +1,63 @@
+{
+  "project_code": "PR007",
+  "agent_name": "Apetito Renata PL",
+  "description": "Inbound AI ordering and menu agent for Apetito restaurant in Slesin. Handles menu questions via searchInMenu tool, takes food orders for delivery or pickup, and provides light upsell suggestions.",
+  "provider": "vapi",
+  "account_id": "",
+  "provider_agent_id": "005f4909-983b-48a6-88f4-e068efd5456c",
+  "status": "draft",
+  "niche": "restaurant",
+  "use_case": "inbound-ordering",
+  "language": "pl",
+  "voice": {
+    "provider": "11labs",
+    "voice_id": "yOhXTwcNX7GiQq8AsROm",
+    "voice_name": "",
+    "model": "eleven_turbo_v2_5",
+    "speed": 1.1,
+    "stability": 0.5,
+    "similarityBoost": 0.75
+  },
+  "model": {
+    "provider": "openai",
+    "model_id": "gpt-4o",
+    "temperature": 0.4
+  },
+  "transcriber": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "pl"
+  },
+  "tools": [
+    {
+      "name": "searchInMenu",
+      "id": "7006e57f-3356-4923-be30-51f85c0031ae",
+      "description": "Searches the Apetito menu for items, ingredients, allergens, categories"
+    }
+  ],
+  "knowledgeBase": {
+    "provider": "google",
+    "fileIds": ["c2553f87-a300-402a-b1d5-54b5b6124a8e"],
+    "_note": "Original VAPI knowledgeBase config. For transient assistants via HTTP: knowledgeBase can be passed in the model object when creating/updating an assistant via API. However, for fully transient (per-call) assistants created via the /call endpoint, knowledgeBase attachment may require the file to already exist in the VAPI org. Test whether passing knowledgeBase in the transient assistant payload works — if not, the file must be pre-uploaded and referenced by ID."
+  },
+  "analysisPlan": {
+    "structuredDataPlan": {
+      "enabled": true,
+      "metrics": ["RT", "AHT", "FCR", "NPS", "CSAT"],
+      "_note": "KPI evaluation on every call. Schema defines 5 metrics scored by a second LLM pass on the transcript. Original config carried over — testing if VAPI still processes this correctly."
+    },
+    "successEvaluationPlan": {
+      "enabled": true,
+      "rubric": "PercentageScale",
+      "_note": "Call success evaluation based on system prompt objectives. Uses VAPI's built-in evaluation with PercentageScale rubric."
+    }
+  },
+  "server": {
+    "url": "https://hook.eu2.make.com/k1fttnvyjr0sekimoestlyweka4exeak",
+    "timeoutSeconds": 20,
+    "_note": "Make.com webhook for end-of-call-report, function-call, transcript events. API key in original config — do not store here."
+  },
+  "created_at": "2026-08-30",
+  "updated_at": "2026-08-30",
+  "tags": ["inbound", "ordering", "restaurant", "polish", "apetito", "slesin", "menu-search"]
+}

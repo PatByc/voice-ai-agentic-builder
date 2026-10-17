@@ -1,0 +1,50 @@
+{
+    "transcriber":  {
+                        "provider":  "deepgram",
+                        "language":  "pl",
+                        "model":  "nova-3"
+                    },
+    "tags":  [
+                 "inbound",
+                 "receptionist",
+                 "legal",
+                 "polish",
+                 "factolex"
+             ],
+    "updated_at":  "2026-09-03",
+    "created_at":  "2026-08-24",
+    "provider":  "vapi",
+    "use_case":  "inbound-receptionist",
+    "compliance":  "approach-b-no-pii",
+    "description":  "Inbound AI receptionist for Kancelaria Prawna, led by Pan Mecenas Dominik Marchewka. Qualifies legal matters and informs callers about free walk-in consultations during office hours. Approach B — no PII collection, no recording.",
+    "model":  {
+                  "model_id":  "gpt-4.1",
+                  "provider":  "openai"
+              },
+    "project_code":  "PR004",
+    "artifactPlan":  {
+                         "recordingEnabled":  false,
+                         "transcriptPlan":  {
+                                                "enabled":  false
+                                            }
+                     },
+    "variables":  {
+                      "today":  "Current date and time (injected automatically)"
+                  },
+    "account_id":  "vapi-1",
+    "tools":  [
+
+              ],
+    "agent_name":  "Factolex Receptionist PL",
+    "voice":  {
+                  "provider":  "cartesia",
+                  "voice_id":  "43e52207-96fc-4e01-aaf8-cae317e43fdb",
+                  "model":  "sonic-3.5",
+                  "voice_name":  "Kacper"
+              },
+    "provider_agent_id":  "1e792f6d-0598-4dd0-bf64-4f6daa484d71",
+    "trigger":  "Inbound phone call to Factolex law firm",
+    "status":  "live",
+    "niche":  "legal",
+    "language":  "pl"
+}

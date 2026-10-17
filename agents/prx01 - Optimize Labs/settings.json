@@ -1,0 +1,54 @@
+{
+  "project_code": "PRX01",
+  "agent_name": "Optimize Labs Outbound PL",
+  "description": "Outbound AI demo agent for Optimize Labs. Calls leads who replied 'TAK' to cold outreach emails. Acts as a live demo of AI voice tech, qualifies interest, and books meetings with Patryk.",
+  "provider": "vapi",
+  "account_id": "vapi-1",
+  "provider_agent_id": "",
+  "status": "live",
+  "niche": "AI automation agency",
+  "use_case": "speed-to-lead",
+  "language": "pl",
+  "voice": {
+    "provider": "11labs",
+    "model": "eleven_flash_v2_5",
+    "voice_id": "8EWWaNTDrqObI22Gvo1q",
+    "voice_name": ""
+  },
+  "model": {
+    "provider": "openai",
+    "model_id": "gpt-4o",
+    "max_tokens": 300,
+    "temperature": 0.7
+  },
+  "transcriber": {
+    "provider": "deepgram",
+    "model": "nova-2",
+    "language": "pl",
+    "endpointing": 150
+  },
+  "variables": {
+    "company": "Company name",
+    "leadName": "Lead's name (from Prospeo/LinkedIn or fallback)",
+    "context": "AI-enrichment personalization summary (can be empty)",
+    "today": "Current date (injected automatically)"
+  },
+  "tools": ["checkAvailability", "bookAppointment"],
+  "trigger": "Lead replies 'TAK' to cold outreach email → automated demo call",
+  "vapi_config": {
+    "end_call_phrases": ["Do widzenia", "Do usłyszenia", "Goodbye"],
+    "silence_timeout_seconds": 22,
+    "max_duration_seconds": 300,
+    "background_sound": "off",
+    "background_denoising": true,
+    "start_speaking_wait_seconds": 0.4,
+    "smart_endpointing": "livekit",
+    "stop_speaking_num_words": 0,
+    "stop_speaking_voice_seconds": 0.2,
+    "stop_speaking_backoff_seconds": 1,
+    "voicemail_detection": "vapi"
+  },
+  "created_at": "2026-06-27",
+  "updated_at": "2026-07-12",
+  "tags": ["outbound", "speed-to-lead", "polish", "optimizelabs", "demo-call"]
+}

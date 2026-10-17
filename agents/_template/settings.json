@@ -1,0 +1,23 @@
+{
+  "project_code": "PR___",
+  "agent_name": "",
+  "description": "",
+  "provider": "",
+  "account_id": "",
+  "provider_agent_id": "",
+  "status": "draft",
+  "niche": "",
+  "use_case": "",
+  "voice": {
+    "provider": "",
+    "voice_id": "",
+    "voice_name": ""
+  },
+  "model": {
+    "provider": "",
+    "model_id": ""
+  },
+  "created_at": "",
+  "updated_at": "",
+  "tags": []
+}

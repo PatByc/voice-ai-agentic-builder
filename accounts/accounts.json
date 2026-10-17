@@ -1,0 +1,25 @@
+{
+  "accounts": [
+    {
+      "id": "vapi-1",
+      "provider": "vapi",
+      "label": "VAPI Account 1",
+      "email": "",
+      "notes": ""
+    },
+    {
+      "id": "vapi-2",
+      "provider": "vapi",
+      "label": "VAPI Account 2",
+      "email": "",
+      "notes": ""
+    },
+    {
+      "id": "11labs-1",
+      "provider": "elevenlabs",
+      "label": "ElevenLabs Account 1",
+      "email": "",
+      "notes": ""
+    }
+  ]
+}
