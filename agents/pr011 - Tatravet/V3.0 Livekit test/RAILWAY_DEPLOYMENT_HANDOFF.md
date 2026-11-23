@@ -54,7 +54,7 @@ agents/pr011 - Tatravet/V3.0 Livekit test/agent.py
 Responsibilities:
 
 - starts `AgentServer`;
-- registers dispatch name `pr011-tatravet-test`;
+- registers dispatch name `pr011-tatravet`;
 - creates GPT-Live `DuplexModel` with `delegation="client"`;
 - handles delegation events locally;
 - queries Upstash;
@@ -102,14 +102,14 @@ Dispatch name is separate from display name:
 
 ```json
 {
-  "agent_name": "pr011-tatravet-test"
+  "agent_name": "pr011-tatravet"
 }
 ```
 
 The LiveKit dispatch rule must target exactly:
 
 ```text
-pr011-tatravet-test
+pr011-tatravet
 ```
 
 ### Shared Upstash client
@@ -338,7 +338,7 @@ LIVEKIT_API_SECRET
 Successful Railway startup must log a registered worker with:
 
 ```text
-agent_name: pr011-tatravet-test
+agent_name: pr011-tatravet
 ```
 
 Expected conceptually:
@@ -356,7 +356,7 @@ Do not consider a successful Railway build sufficient. Worker registration is th
 Create or update the inbound SIP dispatch rule so calls are sent to:
 
 ```text
-pr011-tatravet-test
+pr011-tatravet
 ```
 
 GitHub/Railway deployment does not create dispatch rules automatically.
@@ -368,7 +368,7 @@ Existing telephone path must provide:
 1. Telnyx number;
 2. Telnyx SIP trunk or connection;
 3. LiveKit inbound trunk matching Telnyx authentication/routing;
-4. LiveKit dispatch rule targeting `pr011-tatravet-test`;
+4. LiveKit dispatch rule targeting `pr011-tatravet`;
 5. permitted caller/destination configuration as required by Telnyx.
 
 Do not change the production Telnyx route before the Railway worker is registered and a staging/browser room test succeeds.
@@ -513,7 +513,7 @@ Check:
 - no import error for `livekit_upstash_faq`;
 - no prompt/settings file-not-found error;
 - no authentication error;
-- registered worker name is `pr011-tatravet-test`;
+- registered worker name is `pr011-tatravet`;
 - worker remains running after startup.
 
 ### 4. Browser or Agent Console smoke test
@@ -552,7 +552,7 @@ Expected knowledge behavior:
 
 After browser smoke test passes:
 
-- route a staging Telnyx/LiveKit number or restricted dispatch rule to `pr011-tatravet-test`;
+- route a staging Telnyx/LiveKit number or restricted dispatch rule to `pr011-tatravet`;
 - place calls from the target Polish caller location;
 - verify inbound audio, greeting, retrieval, interruption and hangup;
 - inspect Telnyx, LiveKit and Railway logs using room/session/call identifiers;
@@ -602,7 +602,7 @@ Rollback must be possible by restoring the prior Telnyx/Vapi destination or Live
 
 If Railway worker is unhealthy:
 
-1. stop sending new dispatches to `pr011-tatravet-test`;
+1. stop sending new dispatches to `pr011-tatravet`;
 2. leave existing calls to finish where possible;
 3. restore previous route;
 4. keep Railway logs and LiveKit session IDs;
@@ -680,7 +680,7 @@ Deployment is complete only when all are true:
 
 - Railway build succeeds from repository root.
 - Production process stays alive.
-- Worker registers with LiveKit as `pr011-tatravet-test`.
+- Worker registers with LiveKit as `pr011-tatravet`.
 - `PR011_LIVEKIT_VARIANT=gpt-live-client` is active.
 - Upstash check returns `KB_PR011_Tatravet_v2.md` results.
 - Browser/room smoke test passes all five factual/safety cases.

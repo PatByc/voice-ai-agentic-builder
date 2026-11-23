@@ -6,7 +6,7 @@
   "language": "pl",
   "source_version": "V2.0",
   "livekit": {
-    "agent_name": "pr011-tatravet-test",
+    "agent_name": "pr011-tatravet",
     "default_variant": "gpt-live-client",
     "variants": {
       "gpt-live-client": {
