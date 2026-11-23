@@ -185,3 +185,108 @@ Keep Vapi while call volume is low and the acquisition system is still being val
 - LiveKit Agents: https://docs.livekit.io/agents/
 - LiveKit OpenAI Realtime: https://docs.livekit.io/agents/models/realtime/openai/
 - Pipecat Telnyx WebSockets: https://docs.pipecat.ai/pipecat/telephony/telnyx-websockets
+
+---
+
+## Shared Railway knowledge-base and semantic-search service
+
+### Idea
+
+When the current Upstash free-tier limits become restrictive, build a shared Railway-hosted knowledge service for all voice agents. Reproduce the existing Upstash vector semantic-search path and its surrounding behavior as closely as practical, including retrieval, result ranking, the reasoning/grounding LLM step and the existing response contract.
+
+The first migration target should be 1:1 behavioral compatibility with the current agent integrations rather than a redesign. Existing callers should require only an endpoint and credential change.
+
+### Current Upstash usage snapshot — 2026-11-23
+
+| Resource | Current usage | Free limit |
+|---|---:|---:|
+| Records | 249 | 140,000 |
+| Requests | 2 | 20,000/day |
+| Storage | 2 MB | 1 GB |
+| Bandwidth | 1 MB | 50 GB |
+| Cost | $0.00 | — |
+
+There is no immediate capacity pressure. Treat this as a planned migration project to begin when usage approaches a free-tier limit, Upstash pricing becomes material, or centralized control becomes operationally valuable.
+
+### Proposed architecture
+
+```text
+Vapi, LiveKit and future agent runtimes
+→ one Railway HTTP knowledge-service URL
+→ API gateway authentication and project authorization
+→ agent/project-specific knowledge namespace
+→ embedding and semantic search
+→ optional reasoning/grounding LLM
+→ normalized evidence-backed response
+```
+
+The initial external contract should use one rotatable service API key shared by our agent runtimes. The Railway gateway must validate the key before processing a request and internally restrict every request by trusted `project_code`, agent identity and allowed knowledge-base namespace. Do not allow callers to select arbitrary databases or namespaces without server-side authorization. Per-agent credentials can be introduced later if the shared credential's blast radius becomes unacceptable.
+
+### Knowledge organization
+
+Use one shared service while keeping each agent's knowledge logically isolated and versioned. Every stored item should identify at least:
+
+- `project_code`;
+- agent or knowledge-base identifier;
+- source document and source section;
+- content version;
+- approved/published status;
+- embedding version;
+- searchable text and metadata.
+
+Queries must always be scoped to the authorized project and knowledge base. Cross-agent retrieval must be impossible unless explicitly configured.
+
+The storage engine and vector database are still to be selected. Preserve a clean service boundary so the HTTP contract does not depend on a specific database implementation.
+
+### Compatibility requirements
+
+Replicate the current Upstash-backed behavior before adding new capabilities:
+
+- the same query input expected by existing `search_faq` integrations;
+- equivalent embedding and semantic ranking behavior;
+- configurable `topK`, retaining `topK: 3` as the current default;
+- scores and source metadata sufficient for grounding and diagnostics;
+- the same approved-facts and no-invention rules;
+- equivalent reasoning/grounding LLM behavior where the current flow uses it;
+- deterministic handling of empty, low-confidence and unauthorized results;
+- bounded timeouts and normalized error responses;
+- request IDs, latency measurements and structured logs;
+- no cross-project data leakage.
+
+### Suggested API shape
+
+```text
+POST /v1/knowledge/search
+Authorization: Bearer <shared-service-key>
+Content-Type: application/json
+
+{
+  "projectCode": "PR011",
+  "knowledgeBase": "tatravet",
+  "query": "Czy klinika jest otwarta w sobotę?",
+  "topK": 3
+}
+```
+
+The response should return retrieved facts, scores, source/version metadata and an explicit result status. If the service includes a reasoning answer, keep the retrieved evidence separate from the generated answer so callers can verify grounding.
+
+### Migration and validation
+
+1. Freeze representative queries and raw Upstash results for every active knowledge base.
+2. Import the same approved content into the Railway service without modifying source text.
+3. Run both services in parallel against identical queries.
+4. Compare top results, ranking, scores, answer grounding and p50/p95 latency.
+5. Test unauthorized project and namespace access.
+6. Switch one draft agent by changing only its endpoint and credential.
+7. Keep a rollback path to Upstash until production parity is demonstrated.
+8. Migrate the remaining agents only after retrieval quality and reliability meet or exceed the existing implementation.
+
+### Success criteria
+
+- Existing agent integrations work with minimal endpoint-level changes.
+- Retrieval accuracy does not regress on the frozen evaluation set.
+- No agent can access another agent's private knowledge base.
+- The service supports all current knowledge bases through one maintained deployment.
+- Search and reasoning latency are visible separately.
+- Knowledge imports are repeatable, versioned and reversible.
+- The Railway operating cost is lower than or operationally preferable to the Upstash tier it replaces.
